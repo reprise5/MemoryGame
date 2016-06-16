@@ -350,8 +350,6 @@ public class GameBoard extends javax.swing.JFrame {
             int type = tileControl.getTileType(i);
         }
         System.out.println();
-        //put these shapes behind the buttons.
-        // ...
         
     }//GEN-LAST:event_startGameButtonActionPerformed
 
@@ -406,6 +404,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("2,1 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile21ActionPerformed
 
     //Tile 2,2 | ID 5 - Press
@@ -415,6 +415,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("2,2 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile22ActionPerformed
 
     //Tile 2,3 | ID 6 - Press
@@ -424,6 +426,8 @@ public class GameBoard extends javax.swing.JFrame {
        
         System.out.print("2,3 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile23ActionPerformed
 
     //Tile 2,4 | ID 7 - Press
@@ -433,6 +437,8 @@ public class GameBoard extends javax.swing.JFrame {
              
         System.out.print("2,4 -- ");
         type = tileControl.getTileType(ID);
+        showTileShape(ID, type);
+        
     }//GEN-LAST:event_Tile24ActionPerformed
 
     //Tile 3,1 | ID 8 - Press
@@ -442,6 +448,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,1 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile31ActionPerformed
 
     //Tile 3,2 | ID 9 - Press
@@ -451,6 +459,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,2 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile32ActionPerformed
 
     //Tile 3,3 | ID 10 - Press
@@ -461,6 +471,7 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("3,3 -- ");
         type = tileControl.getTileType(ID);
         
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile33ActionPerformed
 
     //Tile 3,4 | ID 11 - Press
@@ -470,6 +481,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,4 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile34ActionPerformed
 
     //Tile 4,1 | ID 12 - Press
@@ -479,6 +492,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,1 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile41ActionPerformed
 
     //Tile 4,2 | ID 13 - Press
@@ -488,6 +503,8 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,2 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile42ActionPerformed
 
     //Tile 4,3 | ID 14 - Press
@@ -497,6 +514,8 @@ public class GameBoard extends javax.swing.JFrame {
           
         System.out.print("4,3 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile43ActionPerformed
 
     //Tile 4,4 | ID 15 - Press
@@ -506,13 +525,13 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,4 -- ");
         type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
     }//GEN-LAST:event_Tile44ActionPerformed
 
     // will display an icon on the button basec on the shape_code that the button asks for.
     public void showTileShape(int ID, int type){
         //first need to know which button to flip (ID), then what to change it to (type).
-//        switch(ID){
-//            case 0:
             if (ID == 0){
                 switch(type){
                     case 0:
@@ -575,7 +594,7 @@ public class GameBoard extends javax.swing.JFrame {
                         Tile13.setIcon(Circle);
                         break;
                     case 1:
-                        Tile14.setIcon(Cross);
+                        Tile13.setIcon(Cross);
                         break;
                     case 2:
                         Tile13.setIcon(Diamond);
@@ -905,6 +924,62 @@ public class GameBoard extends javax.swing.JFrame {
                         break; 
                 }       
             }
+             else if (ID == 14){
+                switch(type){
+                    case 0:
+                        Tile43.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile43.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile43.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile43.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile43.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile43.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile43.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile43.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 15){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
     }
     
     //Sets the icons to all of the buttons to BlankTile.png.
@@ -988,6 +1063,7 @@ public class GameBoard extends javax.swing.JFrame {
 
     //GLOBALS
     TileControl tileControl = new TileControl();
+    
     ImageIcon Circle = new ImageIcon("MGshapes/Circle.png");
     ImageIcon Cross = new ImageIcon("MGshapes/Cross.png");
     ImageIcon Diamond = new ImageIcon("MGshapes/Diamond.png");
@@ -998,4 +1074,7 @@ public class GameBoard extends javax.swing.JFrame {
     ImageIcon X = new ImageIcon("MGshapes/X.png");
     ImageIcon Blank = new ImageIcon("MGshapes/BlankTile.png");
     
+    int count = 0;                  //1 for first tile flipped, 2 for second.  if 2, check match.
+    int ID_Guess1, ID_Guess2;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
+    int type_guess2, type_Guess2;   //the ShapeCodes for the 2 guesses.  used for testing a match. 
 }
