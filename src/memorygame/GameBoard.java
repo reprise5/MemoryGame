@@ -1,0 +1,1001 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package memorygame;
+import javax.swing.ImageIcon;
+
+/**
+ *
+ * @author reprise
+ */
+public class GameBoard extends javax.swing.JFrame {
+
+    /**
+     * Creates new form GameBoard
+     */
+    public GameBoard() {
+        initComponents();
+    }
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        Tile11 = new javax.swing.JButton();
+        Tile14 = new javax.swing.JButton();
+        Tile12 = new javax.swing.JButton();
+        Tile13 = new javax.swing.JButton();
+        Tile22 = new javax.swing.JButton();
+        Tile23 = new javax.swing.JButton();
+        Tile21 = new javax.swing.JButton();
+        Tile24 = new javax.swing.JButton();
+        Tile31 = new javax.swing.JButton();
+        Tile32 = new javax.swing.JButton();
+        Tile41 = new javax.swing.JButton();
+        Tile42 = new javax.swing.JButton();
+        Tile43 = new javax.swing.JButton();
+        Tile44 = new javax.swing.JButton();
+        Tile33 = new javax.swing.JButton();
+        Tile34 = new javax.swing.JButton();
+        ScoreScreen = new javax.swing.JTextField();
+        ScoreScreenLabel = new javax.swing.JLabel();
+        startGameButton = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        FileMenu = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        GameMenu = new javax.swing.JMenu();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Memory Tiles -  Memory Game");
+
+        Tile11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile11.setEnabled(false);
+        Tile11.setFocusable(false);
+        Tile11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile11ActionPerformed(evt);
+            }
+        });
+
+        Tile14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile14.setEnabled(false);
+        Tile14.setFocusable(false);
+        Tile14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile14ActionPerformed(evt);
+            }
+        });
+
+        Tile12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile12.setEnabled(false);
+        Tile12.setFocusable(false);
+        Tile12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile12ActionPerformed(evt);
+            }
+        });
+
+        Tile13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile13.setEnabled(false);
+        Tile13.setFocusable(false);
+        Tile13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile13ActionPerformed(evt);
+            }
+        });
+
+        Tile22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile22.setEnabled(false);
+        Tile22.setFocusable(false);
+        Tile22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile22ActionPerformed(evt);
+            }
+        });
+
+        Tile23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile23.setEnabled(false);
+        Tile23.setFocusable(false);
+        Tile23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile23ActionPerformed(evt);
+            }
+        });
+
+        Tile21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile21.setEnabled(false);
+        Tile21.setFocusable(false);
+        Tile21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile21ActionPerformed(evt);
+            }
+        });
+
+        Tile24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile24.setEnabled(false);
+        Tile24.setFocusable(false);
+        Tile24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile24ActionPerformed(evt);
+            }
+        });
+
+        Tile31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile31.setEnabled(false);
+        Tile31.setFocusable(false);
+        Tile31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile31ActionPerformed(evt);
+            }
+        });
+
+        Tile32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile32.setEnabled(false);
+        Tile32.setFocusable(false);
+        Tile32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile32ActionPerformed(evt);
+            }
+        });
+
+        Tile41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile41.setEnabled(false);
+        Tile41.setFocusable(false);
+        Tile41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile41ActionPerformed(evt);
+            }
+        });
+
+        Tile42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile42.setEnabled(false);
+        Tile42.setFocusable(false);
+        Tile42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile42ActionPerformed(evt);
+            }
+        });
+
+        Tile43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile43.setEnabled(false);
+        Tile43.setFocusable(false);
+        Tile43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile43ActionPerformed(evt);
+            }
+        });
+
+        Tile44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile44.setEnabled(false);
+        Tile44.setFocusable(false);
+        Tile44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile44ActionPerformed(evt);
+            }
+        });
+
+        Tile33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile33.setEnabled(false);
+        Tile33.setFocusable(false);
+        Tile33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile33ActionPerformed(evt);
+            }
+        });
+
+        Tile34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
+        Tile34.setEnabled(false);
+        Tile34.setFocusable(false);
+        Tile34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile34ActionPerformed(evt);
+            }
+        });
+
+        ScoreScreen.setEditable(false);
+        ScoreScreen.setBackground(new java.awt.Color(153, 255, 255));
+        ScoreScreen.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        ScoreScreen.setText("0");
+        ScoreScreen.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        ScoreScreen.setEnabled(false);
+        ScoreScreen.setFocusable(false);
+
+        ScoreScreenLabel.setFont(new java.awt.Font("FreeSerif", 1, 14)); // NOI18N
+        ScoreScreenLabel.setText("SCORE:");
+
+        startGameButton.setText("** START GAME **");
+        startGameButton.setToolTipText("");
+        startGameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startGameButtonActionPerformed(evt);
+            }
+        });
+
+        FileMenu.setText("File");
+
+        jMenuItem1.setText("Quit");
+        FileMenu.add(jMenuItem1);
+
+        jMenuBar1.add(FileMenu);
+
+        GameMenu.setText("Game");
+        jMenuBar1.add(GameMenu);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(startGameButton)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 2, Short.MAX_VALUE)
+                        .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 23, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    // = = = = = = = = = = START GAME BUTTON = = = = = = = = = =
+    private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
+        System.out.println("============NEW=GAME============");
+        //Re-Enable the buttons.
+        Tile11.setEnabled(true);
+        Tile12.setEnabled(true);
+        Tile13.setEnabled(true);
+        Tile14.setEnabled(true);
+        Tile21.setEnabled(true);
+        Tile22.setEnabled(true);
+        Tile23.setEnabled(true);
+        Tile24.setEnabled(true);
+        Tile31.setEnabled(true);
+        Tile32.setEnabled(true);
+        Tile33.setEnabled(true);
+        Tile34.setEnabled(true);
+        Tile41.setEnabled(true);
+        Tile42.setEnabled(true);
+        Tile43.setEnabled(true);
+        Tile44.setEnabled(true);
+        
+        //Set the icons to be Blank.  (TEMPORARY)
+        wipeBoard();
+        
+        //generate random #'s and assign them to shapes as IDs.
+        tileControl.initShuffleTiles();
+        for (int i = 0; i<= 15; i++){
+            System.out.print(i + ": ");
+            int type = tileControl.getTileType(i);
+        }
+        System.out.println();
+        //put these shapes behind the buttons.
+        // ...
+        
+    }//GEN-LAST:event_startGameButtonActionPerformed
+
+    //Tile 1,1 | ID 0 - Press
+    private void Tile11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile11ActionPerformed
+        int ID = 0;
+        int type;
+        
+        System.out.print("1,1 -- ");
+        type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
+    }//GEN-LAST:event_Tile11ActionPerformed
+
+    //Tile 1,2 | ID 1 - Press
+    private void Tile12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile12ActionPerformed
+        int ID = 1;
+        int type;
+        
+        System.out.print("1,2 -- ");
+        type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
+    }//GEN-LAST:event_Tile12ActionPerformed
+
+    //Tile 1,3 | ID 2 - Press
+    private void Tile13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile13ActionPerformed
+        int ID = 2;
+        int type;
+         
+        System.out.print("1,3 -- ");
+        type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
+    }//GEN-LAST:event_Tile13ActionPerformed
+
+    //Tile 1,4 | ID 3 - Press
+    private void Tile14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile14ActionPerformed
+        int ID = 3;
+        int type;
+         
+        System.out.print("1,4 -- ");
+        type = tileControl.getTileType(ID);
+        
+        showTileShape(ID, type);
+    }//GEN-LAST:event_Tile14ActionPerformed
+
+    //Tile 2,1 | ID 4 - Press
+    private void Tile21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile21ActionPerformed
+        int ID = 4;
+        int type;
+        
+        System.out.print("2,1 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile21ActionPerformed
+
+    //Tile 2,2 | ID 5 - Press
+    private void Tile22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile22ActionPerformed
+        int ID = 5;
+        int type;
+        
+        System.out.print("2,2 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile22ActionPerformed
+
+    //Tile 2,3 | ID 6 - Press
+    private void Tile23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile23ActionPerformed
+        int ID = 6;
+        int type;
+       
+        System.out.print("2,3 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile23ActionPerformed
+
+    //Tile 2,4 | ID 7 - Press
+    private void Tile24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile24ActionPerformed
+        int ID = 7;
+        int type;
+             
+        System.out.print("2,4 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile24ActionPerformed
+
+    //Tile 3,1 | ID 8 - Press
+    private void Tile31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile31ActionPerformed
+        int ID = 8;
+        int type;
+        
+        System.out.print("3,1 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile31ActionPerformed
+
+    //Tile 3,2 | ID 9 - Press
+    private void Tile32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile32ActionPerformed
+        int ID = 9;
+        int type;   
+        
+        System.out.print("3,2 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile32ActionPerformed
+
+    //Tile 3,3 | ID 10 - Press
+    private void Tile33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile33ActionPerformed
+        int ID = 10;
+        int type;
+        
+        System.out.print("3,3 -- ");
+        type = tileControl.getTileType(ID);
+        
+    }//GEN-LAST:event_Tile33ActionPerformed
+
+    //Tile 3,4 | ID 11 - Press
+    private void Tile34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile34ActionPerformed
+        int ID = 11;
+        int type;
+        
+        System.out.print("3,4 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile34ActionPerformed
+
+    //Tile 4,1 | ID 12 - Press
+    private void Tile41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile41ActionPerformed
+        int ID = 12;
+        int type;      
+        
+        System.out.print("4,1 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile41ActionPerformed
+
+    //Tile 4,2 | ID 13 - Press
+    private void Tile42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile42ActionPerformed
+        int ID = 13;
+        int type;
+        
+        System.out.print("4,2 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile42ActionPerformed
+
+    //Tile 4,3 | ID 14 - Press
+    private void Tile43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile43ActionPerformed
+        int ID = 14;
+        int type;
+          
+        System.out.print("4,3 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile43ActionPerformed
+
+    //Tile 4,4 | ID 15 - Press
+    private void Tile44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile44ActionPerformed
+        int ID = 15;
+        int type;   
+        
+        System.out.print("4,4 -- ");
+        type = tileControl.getTileType(ID);
+    }//GEN-LAST:event_Tile44ActionPerformed
+
+    // will display an icon on the button basec on the shape_code that the button asks for.
+    public void showTileShape(int ID, int type){
+        //first need to know which button to flip (ID), then what to change it to (type).
+//        switch(ID){
+//            case 0:
+            if (ID == 0){
+                switch(type){
+                    case 0:
+                        Tile11.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile11.setIcon(Cross);        
+                        break;
+                    case 2:
+                        Tile11.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile11.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile11.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile11.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile11.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile11.setIcon(X);
+                        break;
+                }
+            }
+            else if (ID == 1){
+                switch(type){
+                    case 0:
+                        Tile12.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile12.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile12.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile12.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile12.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile12.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile12.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile12.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 2){
+                switch(type){
+                    case 0:
+                        Tile13.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile14.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile13.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile13.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile13.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile13.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile13.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile13.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 3){
+                switch(type){
+                    case 0:
+                        Tile14.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile14.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile14.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile14.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile14.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile14.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile14.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile14.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 4){
+                switch(type){
+                    case 0:
+                        Tile21.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile21.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile21.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile21.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile21.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile21.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile21.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile21.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 5){
+                switch(type){
+                    case 0:
+                        Tile22.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile22.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile22.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile22.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile22.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile22.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile22.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile22.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 6){
+                switch(type){
+                    case 0:
+                        Tile23.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile23.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile23.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile23.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile23.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile23.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile23.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile23.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 7){
+                switch(type){
+                    case 0:
+                        Tile24.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile24.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile24.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile24.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile24.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile24.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile24.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile24.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 8){
+                switch(type){
+                    case 0:
+                        Tile31.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile31.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile31.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile31.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile31.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile31.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile31.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile31.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 9){
+                switch(type){
+                    case 0:
+                        Tile32.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile32.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile32.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile32.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile32.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile32.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile32.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile32.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 10){
+                switch(type){
+                    case 0:
+                        Tile33.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile33.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile33.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile33.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile33.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile33.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile33.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile33.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 11){
+                switch(type){
+                    case 0:
+                        Tile34.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile34.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile34.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile34.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile34.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile34.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile34.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile34.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 12){
+                switch(type){
+                    case 0:
+                        Tile41.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile41.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile41.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile41.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile41.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile41.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile41.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile41.setIcon(X);
+                        break; 
+                }       
+            }
+             else if (ID == 13){
+                switch(type){
+                    case 0:
+                        Tile42.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile42.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile42.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile42.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile42.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile42.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile42.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile42.setIcon(X);
+                        break; 
+                }       
+            }
+    }
+    
+    //Sets the icons to all of the buttons to BlankTile.png.
+    
+    public void wipeBoard(){
+        Tile11.setIcon(Blank);
+        Tile12.setIcon(Blank);
+        Tile13.setIcon(Blank);
+        Tile14.setIcon(Blank);
+        Tile21.setIcon(Blank);
+        Tile22.setIcon(Blank);
+        Tile23.setIcon(Blank);
+        Tile24.setIcon(Blank);
+        Tile31.setIcon(Blank);
+        Tile32.setIcon(Blank);
+        Tile33.setIcon(Blank);
+        Tile34.setIcon(Blank);
+        Tile41.setIcon(Blank);
+        Tile42.setIcon(Blank);
+        Tile43.setIcon(Blank);
+        Tile44.setIcon(Blank);
+    }
+    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GameBoard().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu FileMenu;
+    private javax.swing.JMenu GameMenu;
+    private javax.swing.JTextField ScoreScreen;
+    private javax.swing.JLabel ScoreScreenLabel;
+    private javax.swing.JButton Tile11;
+    private javax.swing.JButton Tile12;
+    private javax.swing.JButton Tile13;
+    private javax.swing.JButton Tile14;
+    private javax.swing.JButton Tile21;
+    private javax.swing.JButton Tile22;
+    private javax.swing.JButton Tile23;
+    private javax.swing.JButton Tile24;
+    private javax.swing.JButton Tile31;
+    private javax.swing.JButton Tile32;
+    private javax.swing.JButton Tile33;
+    private javax.swing.JButton Tile34;
+    private javax.swing.JButton Tile41;
+    private javax.swing.JButton Tile42;
+    private javax.swing.JButton Tile43;
+    private javax.swing.JButton Tile44;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JButton startGameButton;
+    // End of variables declaration//GEN-END:variables
+
+    //GLOBALS
+    TileControl tileControl = new TileControl();
+    ImageIcon Circle = new ImageIcon("MGshapes/Circle.png");
+    ImageIcon Cross = new ImageIcon("MGshapes/Cross.png");
+    ImageIcon Diamond = new ImageIcon("MGshapes/Diamond.png");
+    ImageIcon Donut = new ImageIcon("MGshapes/Donut.png");
+    ImageIcon Eclipse = new ImageIcon("MGshapes/Eclipse.png");
+    ImageIcon Square = new ImageIcon("MGshapes/Square.png");
+    ImageIcon Star = new ImageIcon("MGshapes/Star.png");
+    ImageIcon X = new ImageIcon("MGshapes/X.png");
+    ImageIcon Blank = new ImageIcon("MGshapes/BlankTile.png");
+    
+}
