@@ -69,38 +69,38 @@ public class TileControl {
     public int getTileType(int ID){
         int type = 100;
         
-        System.out.print("Shape_Code: " + type + " - ");
+        System.out.print("Shape_Code: ");
         if (ID == circle1 || ID == circle2){
             type = 0;
-            System.out.print("Circle");
+            System.out.print(type + " - Circle");
         }
         else if (ID == cross1 || ID == cross2){
             type = 1;
-            System.out.print("Cross");
+            System.out.print(type + " - Cross");
         }
         else if (ID == diamond1 || ID == diamond2){
             type = 2;
-            System.out.print("Diamond");
+            System.out.print(type + " - Diamond");
         }
         else if (ID == donut1 || ID == donut2){
             type = 3;
-            System.out.print("Donut");
+            System.out.print(type + " - Donut");
         }
         else if (ID == eclipse1 || ID == eclipse2){
             type = 4;
-            System.out.print("Eclipse");
+            System.out.print(type + " - Eclipse");
         }
         else if (ID == square1 || ID == square2){
             type = 5;
-            System.out.print("Square");      
+            System.out.print(type + " - Square");      
         }
         else if (ID == star1 || ID == star2){
             type = 6;
-            System.out.print("Star");
+            System.out.print(type + " - Star");
         }
         else if (ID == X1 || ID == X2){
             type = 7;
-            System.out.print("X");
+            System.out.print(type + " - X");
         }
         System.out.println();
         

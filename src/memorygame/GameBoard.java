@@ -322,6 +322,18 @@ public class GameBoard extends javax.swing.JFrame {
     // = = = = = = = = = = START GAME BUTTON = = = = = = = = = =
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
         System.out.println("============NEW=GAME============");
+        
+        PrevID_Guess1 = 100;
+        PrevID_Guess2 = 100;
+        ID_Guess1 = 100;
+        ID_Guess2 = 100;
+        match = false;
+        count = 0;
+        score = 0;
+        sScore = "0";
+        
+        ScoreScreen.setText(sScore);
+        
         //Re-Enable the buttons.
         Tile11.setEnabled(true);
         Tile12.setEnabled(true);
@@ -361,7 +373,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("1,1 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile11ActionPerformed
 
     //Tile 1,2 | ID 1 - Press
@@ -372,7 +426,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("1,2 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile12ActionPerformed
 
     //Tile 1,3 | ID 2 - Press
@@ -383,7 +479,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("1,3 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+         if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile13ActionPerformed
 
     //Tile 1,4 | ID 3 - Press
@@ -394,7 +532,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("1,4 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile14ActionPerformed
 
     //Tile 2,1 | ID 4 - Press
@@ -405,7 +585,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("2,1 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile21ActionPerformed
 
     //Tile 2,2 | ID 5 - Press
@@ -416,7 +638,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("2,2 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+         if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile22ActionPerformed
 
     //Tile 2,3 | ID 6 - Press
@@ -427,7 +691,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("2,3 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile23ActionPerformed
 
     //Tile 2,4 | ID 7 - Press
@@ -437,7 +743,50 @@ public class GameBoard extends javax.swing.JFrame {
              
         System.out.print("2,4 -- ");
         type = tileControl.getTileType(ID);
-        showTileShape(ID, type);
+
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
         
     }//GEN-LAST:event_Tile24ActionPerformed
 
@@ -449,7 +798,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("3,1 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile31ActionPerformed
 
     //Tile 3,2 | ID 9 - Press
@@ -460,7 +851,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("3,2 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile32ActionPerformed
 
     //Tile 3,3 | ID 10 - Press
@@ -471,7 +904,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("3,3 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile33ActionPerformed
 
     //Tile 3,4 | ID 11 - Press
@@ -482,7 +957,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("3,4 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile34ActionPerformed
 
     //Tile 4,1 | ID 12 - Press
@@ -493,7 +1010,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("4,1 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile41ActionPerformed
 
     //Tile 4,2 | ID 13 - Press
@@ -504,7 +1063,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("4,2 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile42ActionPerformed
 
     //Tile 4,3 | ID 14 - Press
@@ -515,7 +1116,49 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("4,3 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile43ActionPerformed
 
     //Tile 4,4 | ID 15 - Press
@@ -526,10 +1169,52 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("4,4 -- ");
         type = tileControl.getTileType(ID);
         
-        showTileShape(ID, type);
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            match = testMatch(type_Guess1, type_Guess2);
+            
+            if(!match){
+                System.out.println("     *No Match.*     ");
+                score = score - 2;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+            }
+            else{
+                System.out.println("     *MATCH!*     ");
+                score = score + 5;
+                sScore = Integer.toString(score);
+                ScoreScreen.setText(sScore);
+                
+                buttonEnabledSwitch(false, ID_Guess1);
+                buttonEnabledSwitch(false, ID_Guess2);
+            }
+            count = 0;
+        }
     }//GEN-LAST:event_Tile44ActionPerformed
 
-    // will display an icon on the button basec on the shape_code that the button asks for.
+    // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
     public void showTileShape(int ID, int type){
         //first need to know which button to flip (ID), then what to change it to (type).
             if (ID == 0){
@@ -982,8 +1667,7 @@ public class GameBoard extends javax.swing.JFrame {
             }
     }
     
-    //Sets the icons to all of the buttons to BlankTile.png.
-    
+    //Sets the icons to all of the buttons to BlankTile.png. Doesn't reset the actual game.
     public void wipeBoard(){
         Tile11.setIcon(Blank);
         Tile12.setIcon(Blank);
@@ -1001,6 +1685,182 @@ public class GameBoard extends javax.swing.JFrame {
         Tile42.setIcon(Blank);
         Tile43.setIcon(Blank);
         Tile44.setIcon(Blank);
+    }
+    
+    //do the 2 buttons chosen have matching shapes?
+    public boolean testMatch(int type1, int type2){
+        boolean match = false;
+        
+        if (type1 == type2){
+            match = true;
+        }
+        
+        return match;
+    }
+    
+    //Hide the shape and set icon to blank a particular button/Tile.
+    public void hideSelectedTile(int ID){
+        switch(ID){
+            case 0:
+                Tile11.setIcon(Blank);
+                break;
+            case 1:
+                Tile12.setIcon(Blank);
+                break;
+            case 2:
+                Tile13.setIcon(Blank);
+                break;
+            case 3: 
+                Tile14.setIcon(Blank);
+                break;
+            case 4:
+                Tile21.setIcon(Blank);
+                break;
+            case 5:
+                Tile22.setIcon(Blank);
+                break;
+            case 6:
+                Tile23.setIcon(Blank);
+                break;
+            case 7:
+                Tile24.setIcon(Blank);
+                break;
+            case 8:
+                Tile31.setIcon(Blank);
+                break;
+            case 9:
+                Tile32.setIcon(Blank);
+                break;
+            case 10:
+                Tile33.setIcon(Blank);
+                break;
+            case 11:
+                Tile34.setIcon(Blank);
+                break;
+            case 12:
+                Tile41.setIcon(Blank);
+                break;
+            case 13:
+                Tile42.setIcon(Blank);
+                break;
+            case 14:
+                Tile43.setIcon(Blank);
+                break;
+            case 15:
+                Tile44.setIcon(Blank);
+                break;       
+        }
+    }
+    
+    //enable or disable a button. (enable when it's blank [again], & disable when a shape is showing.)
+    public void buttonEnabledSwitch(boolean state, int ID){
+        if (state){
+            //then enable the button at the passed ID.
+            switch(ID){
+                case 0:
+                    Tile11.setEnabled(true);
+                    break;
+                case 1:
+                    Tile12.setEnabled(true);
+                    break;
+                case 2:
+                    Tile13.setEnabled(true);
+                    break;
+                case 3:
+                    Tile14.setEnabled(true);
+                    break;
+                case 4:
+                    Tile21.setEnabled(true);
+                    break;
+                case 5:
+                    Tile22.setEnabled(true);
+                    break;
+                case 6:
+                    Tile23.setEnabled(true);
+                    break;
+                case 7:
+                    Tile24.setEnabled(true);
+                    break;
+                case 8:
+                    Tile31.setEnabled(true);
+                    break;
+                case 9:
+                    Tile32.setEnabled(true);
+                    break;
+                case 10:
+                    Tile33.setEnabled(true);
+                    break;
+                case 11:
+                    Tile34.setEnabled(true);
+                    break;
+                case 12:
+                    Tile41.setEnabled(true);
+                    break;
+                case 13:
+                    Tile42.setEnabled(true);
+                    break;
+                case 14:
+                    Tile43.setEnabled(true);
+                    break;
+                case 15:
+                    Tile44.setEnabled(true);
+                    break;    
+            }
+        }
+        else{
+            //then disable the button at the passed ID.
+            switch(ID){
+                case 0:
+                    Tile11.setEnabled(false);
+                    
+                    break;
+                case 1:
+                    Tile12.setEnabled(false);
+                    break;
+                case 2:
+                    Tile13.setEnabled(false);
+                    break;
+                case 3:
+                    Tile14.setEnabled(false);
+                    break;
+                case 4:
+                    Tile21.setEnabled(false);
+                    break;
+                case 5:
+                    Tile22.setEnabled(false);
+                    break;
+                case 6:
+                    Tile23.setEnabled(false);
+                    break;
+                case 7:
+                    Tile24.setEnabled(false);
+                    break;
+                case 8:
+                    Tile31.setEnabled(false);
+                    break;
+                case 9:
+                    Tile32.setEnabled(false);
+                    break;
+                case 10:
+                    Tile33.setEnabled(false);
+                    break;
+                case 11:
+                    Tile34.setEnabled(false);
+                    break;
+                case 12:
+                    Tile41.setEnabled(false);
+                    break;
+                case 13:
+                    Tile42.setEnabled(false);
+                    break;
+                case 14:
+                    Tile43.setEnabled(false);
+                    break;
+                case 15:
+                    Tile44.setEnabled(false);
+                    break;    
+            }             
+        }   
     }
     
     public static void main(String args[]) {
@@ -1074,7 +1934,13 @@ public class GameBoard extends javax.swing.JFrame {
     ImageIcon X = new ImageIcon("MGshapes/X.png");
     ImageIcon Blank = new ImageIcon("MGshapes/BlankTile.png");
     
-    int count = 0;                  //1 for first tile flipped, 2 for second.  if 2, check match.
-    int ID_Guess1, ID_Guess2;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
-    int type_guess2, type_Guess2;   //the ShapeCodes for the 2 guesses.  used for testing a match. 
+    int count = 0;                              //1 for first tile flipped, 2 for second.  if 2, check match.
+    int ID_Guess1 = 100, ID_Guess2 = 100;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
+    int type_Guess1, type_Guess2;               //the ShapeCodes for the 2 guesses.  used for testing a match. 
+    boolean match;                              //catches the result from testMatch sub.
+    int score;                                  //saves the player's score
+    String sScore;                              //to be sent to the label.
+    int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
+    int PrevID_Guess2;                          //return to blanks when a new matching has started.
+
 }
