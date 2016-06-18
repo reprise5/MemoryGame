@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package memorygame;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
- *
  * @author reprise
  */
 public class GameBoard extends javax.swing.JFrame {
@@ -62,6 +57,7 @@ public class GameBoard extends javax.swing.JFrame {
         Tile14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile14.setEnabled(false);
         Tile14.setFocusable(false);
+        Tile14.setName(""); // NOI18N
         Tile14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Tile14ActionPerformed(evt);
@@ -195,7 +191,7 @@ public class GameBoard extends javax.swing.JFrame {
         });
 
         ScoreScreen.setEditable(false);
-        ScoreScreen.setBackground(new java.awt.Color(153, 255, 255));
+        ScoreScreen.setBackground(new java.awt.Color(204, 204, 255));
         ScoreScreen.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         ScoreScreen.setText("0");
         ScoreScreen.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -231,89 +227,87 @@ public class GameBoard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(1, 1, 1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(startGameButton)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 2, Short.MAX_VALUE)
-                        .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))))
+                        .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(startGameButton)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 23, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(startGameButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32))
+                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 106, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -397,22 +391,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -450,22 +461,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -479,7 +507,7 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("1,3 -- ");
         type = tileControl.getTileType(ID);
         
-         if (count == 0){
+        if (count == 0){
             System.out.println("(0)COUNT: " + count);
             showTileShape(ID, type);
             ID_Guess1 = ID;
@@ -503,22 +531,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -556,22 +601,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -609,22 +671,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -638,7 +717,7 @@ public class GameBoard extends javax.swing.JFrame {
         System.out.print("2,2 -- ");
         type = tileControl.getTileType(ID);
         
-         if (count == 0){
+        if (count == 0){
             System.out.println("(0)COUNT: " + count);
             showTileShape(ID, type);
             ID_Guess1 = ID;
@@ -662,22 +741,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -715,22 +811,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -768,26 +881,42 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
-        
     }//GEN-LAST:event_Tile24ActionPerformed
 
     //Tile 3,1 | ID 8 - Press
@@ -822,22 +951,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -875,22 +1021,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -928,22 +1091,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -981,22 +1161,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -1034,22 +1231,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -1087,22 +1301,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -1140,22 +1371,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -1193,22 +1441,39 @@ public class GameBoard extends javax.swing.JFrame {
             
             System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
             
-            match = testMatch(type_Guess1, type_Guess2);
-            
-            if(!match){
-                System.out.println("     *No Match.*     ");
-                score = score - 2;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
             }
-            else{
-                System.out.println("     *MATCH!*     ");
-                score = score + 5;
-                sScore = Integer.toString(score);
-                ScoreScreen.setText(sScore);
-                
-                buttonEnabledSwitch(false, ID_Guess1);
-                buttonEnabledSwitch(false, ID_Guess2);
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                }
             }
             count = 0;
         }
@@ -1942,5 +2207,4 @@ public class GameBoard extends javax.swing.JFrame {
     String sScore;                              //to be sent to the label.
     int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
     int PrevID_Guess2;                          //return to blanks when a new matching has started.
-
 }
