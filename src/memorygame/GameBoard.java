@@ -37,24 +37,28 @@ public class GameBoard extends javax.swing.JFrame {
         ScoreScreen = new javax.swing.JTextField();
         ScoreScreenLabel = new javax.swing.JLabel();
         startGameButton = new javax.swing.JButton();
+        QuitButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         FileMenu = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        QuitMenuItem = new javax.swing.JMenuItem();
         GameMenu = new javax.swing.JMenu();
+        resetBoardMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Memory Tiles -  Memory Game");
+        setTitle("4x4 Memory Game");
+        setResizable(false);
 
-        Tile11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile11.setEnabled(false);
         Tile11.setFocusable(false);
+        Tile11.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile11.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile11.setPreferredSize(new java.awt.Dimension(30, 10));
         Tile11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Tile11ActionPerformed(evt);
             }
         });
 
-        Tile14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile14.setEnabled(false);
         Tile14.setFocusable(false);
         Tile14.setName(""); // NOI18N
@@ -64,7 +68,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile12.setEnabled(false);
         Tile12.setFocusable(false);
         Tile12.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +76,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile13.setEnabled(false);
         Tile13.setFocusable(false);
         Tile13.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +84,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile22.setEnabled(false);
         Tile22.setFocusable(false);
         Tile22.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +92,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile23.setEnabled(false);
         Tile23.setFocusable(false);
         Tile23.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +100,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile21.setEnabled(false);
         Tile21.setFocusable(false);
         Tile21.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +108,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile24.setEnabled(false);
         Tile24.setFocusable(false);
         Tile24.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +116,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile31.setEnabled(false);
         Tile31.setFocusable(false);
         Tile31.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +124,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile32.setEnabled(false);
         Tile32.setFocusable(false);
         Tile32.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +132,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile41.setEnabled(false);
         Tile41.setFocusable(false);
         Tile41.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +140,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile42.setEnabled(false);
         Tile42.setFocusable(false);
         Tile42.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +148,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile43.setEnabled(false);
         Tile43.setFocusable(false);
         Tile43.addActionListener(new java.awt.event.ActionListener() {
@@ -163,16 +156,15 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile44.setEnabled(false);
         Tile44.setFocusable(false);
+        Tile44.setVerifyInputWhenFocusTarget(false);
         Tile44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Tile44ActionPerformed(evt);
             }
         });
 
-        Tile33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile33.setEnabled(false);
         Tile33.setFocusable(false);
         Tile33.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +173,6 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
-        Tile34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memorygame/blankTile.png"))); // NOI18N
         Tile34.setEnabled(false);
         Tile34.setFocusable(false);
         Tile34.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +192,7 @@ public class GameBoard extends javax.swing.JFrame {
         ScoreScreenLabel.setFont(new java.awt.Font("FreeSerif", 1, 14)); // NOI18N
         ScoreScreenLabel.setText("SCORE:");
 
-        startGameButton.setText("** START GAME **");
+        startGameButton.setText("START");
         startGameButton.setToolTipText("");
         startGameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,14 +200,30 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
+        QuitButton.setText("QUIT");
+        QuitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitButtonActionPerformed(evt);
+            }
+        });
+
         FileMenu.setText("File");
 
-        jMenuItem1.setText("Quit");
-        FileMenu.add(jMenuItem1);
+        QuitMenuItem.setText("Quit");
+        QuitMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitMenuItemActionPerformed(evt);
+            }
+        });
+        FileMenu.add(QuitMenuItem);
 
         jMenuBar1.add(FileMenu);
 
         GameMenu.setText("Game");
+
+        resetBoardMenuItem.setText("Reset Board");
+        GameMenu.add(resetBoardMenuItem);
+
         jMenuBar1.add(GameMenu);
 
         setJMenuBar(jMenuBar1);
@@ -237,25 +244,6 @@ public class GameBoard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -265,47 +253,67 @@ public class GameBoard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(startGameButton)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(startGameButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(QuitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(startGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ScoreScreen, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(startGameButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(QuitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
+                    .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
+                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, Short.MAX_VALUE))
+                    .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 106, Short.MAX_VALUE))
-                .addGap(37, 37, 37))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
         );
 
         pack();
@@ -348,10 +356,10 @@ public class GameBoard extends javax.swing.JFrame {
         wipeBoard();
         
         //generate random #'s and assign them to shapes as IDs.
-        tileControl.initShuffleTiles();
+        tileControl.initShuffleTiles4x4();
         for (int i = 0; i<= 15; i++){
             System.out.print(i + ": ");
-            int type = tileControl.getTileType(i);
+            int type = tileControl.getTileType4x4(i);
         }
         System.out.println();
         
@@ -363,7 +371,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("1,1 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -433,7 +441,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("1,2 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -503,7 +511,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
          
         System.out.print("1,3 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -573,7 +581,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
          
         System.out.print("1,4 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -643,7 +651,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("2,1 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -713,7 +721,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("2,2 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -783,7 +791,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
        
         System.out.print("2,3 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -853,7 +861,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
              
         System.out.print("2,4 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
 
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -923,7 +931,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,1 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -993,7 +1001,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;   
         
         System.out.print("3,2 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1063,7 +1071,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,3 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1133,7 +1141,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,4 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1203,7 +1211,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;      
         
         System.out.print("4,1 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1273,7 +1281,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("4,2 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1343,7 +1351,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
           
         System.out.print("4,3 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1413,7 +1421,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;   
         
         System.out.print("4,4 -- ");
-        type = tileControl.getTileType(ID);
+        type = tileControl.getTileType4x4(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1476,6 +1484,18 @@ public class GameBoard extends javax.swing.JFrame {
             count = 0;
         }
     }//GEN-LAST:event_Tile44ActionPerformed
+
+    //File>Quit
+    private void QuitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitMenuItemActionPerformed
+        this.dispose();
+        //MainMenu1.setVisible(true);
+        
+    }//GEN-LAST:event_QuitMenuItemActionPerformed
+    
+    //Quit Button, will just close this current game screen not quit the program.
+    private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_QuitButtonActionPerformed
 
     // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
     public void showTileShape(int ID, int type){
@@ -2126,6 +2146,7 @@ public class GameBoard extends javax.swing.JFrame {
         }   
     }
     
+    //form's main
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -2161,6 +2182,8 @@ public class GameBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu FileMenu;
     private javax.swing.JMenu GameMenu;
+    private javax.swing.JButton QuitButton;
+    private javax.swing.JMenuItem QuitMenuItem;
     private javax.swing.JTextField ScoreScreen;
     private javax.swing.JLabel ScoreScreenLabel;
     private javax.swing.JButton Tile11;
@@ -2180,12 +2203,13 @@ public class GameBoard extends javax.swing.JFrame {
     private javax.swing.JButton Tile43;
     private javax.swing.JButton Tile44;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem resetBoardMenuItem;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
 
     //GLOBALS
     TileControl tileControl = new TileControl();
+    //MainMenuForm MainMenu1 = new MainMenuForm();
     
     ImageIcon Circle    = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Circle.png"));
     ImageIcon Cross     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Cross.png"));

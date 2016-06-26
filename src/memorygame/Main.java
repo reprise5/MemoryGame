@@ -15,10 +15,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         GameBoard game0 = new GameBoard();         
-         game0.setVisible(true);
+//         GameBoard game0 = new GameBoard();         
+//         game0.setVisible(true);
+
+         MainMenuForm MainMenu0 = new MainMenuForm();
+         MainMenu0.setVisible(true);
          
-//         TileControl tileShuffle0 = new TileControl();
-//         tileShuffle0.initShuffleTiles();
     }
 }

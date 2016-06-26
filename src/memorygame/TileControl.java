@@ -8,7 +8,7 @@ public class TileControl {
     //GLOBALS 
     
     //these hold the positions (ID) of each of the shapes and their pair.
-    //this ID is handed out from initShuffleTiles() randomCollection array.
+    //this ID is handed out from initShuffleTiles4x4() randomCollection array.
     int circle1, circle2;
     int cross1, cross2;
     int diamond1, diamond2;
@@ -20,7 +20,7 @@ public class TileControl {
     
     //======================================================================================
     //generate random numbers & assign them to each shape twice.  its their location on the game board.
-    public void initShuffleTiles(){
+    public void initShuffleTiles4x4(){
         int n = 0;
 
         //first add all the numbers from 0 to 15 into an array list, then shuffle it
@@ -66,7 +66,7 @@ public class TileControl {
     
     //The type returned is a code from 0-7 that theoretically corresponds to a "shape". 
     //gives us some way of testing matches.
-    public int getTileType(int ID){
+    public int getTileType4x4(int ID){
         int type = 100;
         
         System.out.print("Shape_Code: ");
