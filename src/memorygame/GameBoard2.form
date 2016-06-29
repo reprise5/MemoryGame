@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="6x6 Memory Game"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -26,103 +27,113 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="Tile46" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tile41" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tile43" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tile44" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tile45" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Tile42" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="Tile40" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Tile35" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Tile37" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Tile38" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Tile39" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Tile36" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Tile11" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile12" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile13" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile14" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="ScoreScreenLabel" min="-2" pref="63" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ScoreScreen" min="-2" pref="181" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Component id="startGameButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="QuitButton" min="-2" pref="68" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="Tile22" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile15" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile17" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile16" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="DebugCheck" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Tile61" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile19" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile62" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile20" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile63" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile21" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile64" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile18" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile65" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile66" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="Tile28" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile21" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile22" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile23" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile24" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile25" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile26" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile27" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile24" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="Tile34" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile29" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile31" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile32" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Tile33" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile30" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile34" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile35" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile36" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="ScoreScreenLabel" min="-2" pref="63" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="ScoreScreen" min="-2" pref="181" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                      <Component id="startGameButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="QuitButton" min="-2" pref="68" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="Tile15" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Tile11" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Tile12" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="Tile13" min="-2" pref="100" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="Tile41" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile14" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile42" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Tile16" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="Tile43" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile44" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile45" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile46" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Tile51" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile52" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile53" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile54" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile55" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Tile56" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -139,62 +150,63 @@
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="startGameButton" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                               <Component id="QuitButton" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="DebugCheck" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="Tile11" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="Tile12" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="Tile14" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="Tile13" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="Tile15" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="Tile14" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="Tile11" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Tile18" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile17" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile19" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile21" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile20" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile26" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile22" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Tile24" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile23" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile25" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile27" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile26" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile28" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Tile30" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile29" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile31" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile33" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile32" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile34" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile24" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile21" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="Tile36" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile32" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile33" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile35" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile37" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile39" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile38" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile40" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile34" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile31" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="Tile46" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile42" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile41" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile43" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile45" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="Tile44" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="Tile46" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile41" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="Tile56" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile52" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile53" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile55" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile54" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile51" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="Tile66" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile62" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile63" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile65" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile64" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="Tile61" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
@@ -236,24 +248,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startGameButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile11">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile11ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="Tile12">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
@@ -268,9 +262,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile12ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile13">
       <Properties>
@@ -286,9 +277,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile13ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile14">
       <Properties>
@@ -304,9 +292,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile14ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile15">
       <Properties>
@@ -322,9 +307,21 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile15ActionPerformed"/>
-      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile11">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Tile16">
       <Properties>
@@ -340,99 +337,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile16ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile17">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile17ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile18">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile18ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile19">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile19ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile20">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile20ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile21">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile21ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile22">
       <Properties>
@@ -448,63 +352,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile22ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile23">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile23ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile24">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile24ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile25">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile25ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile26">
       <Properties>
@@ -520,11 +367,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile26ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile27">
+    <Component class="javax.swing.JButton" name="Tile23">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -538,11 +382,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile27ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile28">
+    <Component class="javax.swing.JButton" name="Tile24">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -556,11 +397,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile28ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile29">
+    <Component class="javax.swing.JButton" name="Tile25">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -574,11 +412,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile29ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile30">
+    <Component class="javax.swing.JButton" name="Tile21">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -592,27 +427,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile30ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile31">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile31ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile32">
       <Properties>
@@ -628,63 +442,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile32ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile33">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile33ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile34">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile34ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile35">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile35ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile36">
       <Properties>
@@ -700,11 +457,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile36ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile37">
+    <Component class="javax.swing.JButton" name="Tile33">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -718,11 +472,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile37ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile38">
+    <Component class="javax.swing.JButton" name="Tile34">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -736,11 +487,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile38ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile39">
+    <Component class="javax.swing.JButton" name="Tile35">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -754,11 +502,8 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile39ActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Tile40">
+    <Component class="javax.swing.JButton" name="Tile31">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -772,27 +517,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile40ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile41">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile41ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile42">
       <Properties>
@@ -808,63 +532,6 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile42ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile43">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile43ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile44">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile44ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="Tile45">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-        <Property name="focusable" type="boolean" value="false"/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[32, 10]"/>
-        </Property>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[30, 10]"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile45ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile46">
       <Properties>
@@ -880,9 +547,246 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile46ActionPerformed"/>
-      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile43">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile44">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile45">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile41">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile52">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile56">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile53">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile54">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile55">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile51">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile62">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile66">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile63">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile64">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile65">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Tile61">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32, 10]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[30, 10]"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="QuitButton">
       <Properties>
@@ -891,6 +795,12 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QuitButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="DebugCheck">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Debug"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

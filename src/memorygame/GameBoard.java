@@ -38,6 +38,7 @@ public class GameBoard extends javax.swing.JFrame {
         ScoreScreenLabel = new javax.swing.JLabel();
         startGameButton = new javax.swing.JButton();
         QuitButton = new javax.swing.JButton();
+        DebugCheck = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         FileMenu = new javax.swing.JMenu();
         QuitMenuItem = new javax.swing.JMenuItem();
@@ -207,6 +208,9 @@ public class GameBoard extends javax.swing.JFrame {
             }
         });
 
+        DebugCheck.setText("Debug");
+        DebugCheck.setToolTipText("");
+
         FileMenu.setText("File");
 
         QuitMenuItem.setText("Quit");
@@ -234,50 +238,52 @@ public class GameBoard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(startGameButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(QuitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DebugCheck)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(1, 1, 1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(startGameButton)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(QuitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -285,8 +291,8 @@ public class GameBoard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ScoreScreen, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(ScoreScreen, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(startGameButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(QuitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
@@ -313,7 +319,9 @@ public class GameBoard extends javax.swing.JFrame {
                     .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33))
+                .addGap(4, 4, 4)
+                .addComponent(DebugCheck)
+                .addContainerGap())
         );
 
         pack();
@@ -356,10 +364,16 @@ public class GameBoard extends javax.swing.JFrame {
         wipeBoard();
         
         //generate random #'s and assign them to shapes as IDs.
-        tileControl.initShuffleTiles4x4();
+        tileControl.initShuffle4x4Tiles();
         for (int i = 0; i<= 15; i++){
             System.out.print(i + ": ");
-            int type = tileControl.getTileType4x4(i);
+            int type = tileControl.get4x4TileType(i);
+            
+            //will show all the shapes on the buttons, for debugging reasons.
+            //check the box, and THEN click start for it to work.
+            if (DebugCheck.isSelected()){
+                showTileShape(i, type);
+            }
         }
         System.out.println();
         
@@ -371,7 +385,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("1,1 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -441,7 +455,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("1,2 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -511,7 +525,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
          
         System.out.print("1,3 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -581,7 +595,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
          
         System.out.print("1,4 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -651,7 +665,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("2,1 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -721,7 +735,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("2,2 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -791,7 +805,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
        
         System.out.print("2,3 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -861,7 +875,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
              
         System.out.print("2,4 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
 
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -931,7 +945,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,1 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1001,7 +1015,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;   
         
         System.out.print("3,2 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1071,7 +1085,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,3 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1141,7 +1155,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("3,4 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1211,7 +1225,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;      
         
         System.out.print("4,1 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1281,7 +1295,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
         
         System.out.print("4,2 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1351,7 +1365,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;
           
         System.out.print("4,3 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1421,7 +1435,7 @@ public class GameBoard extends javax.swing.JFrame {
         int type;   
         
         System.out.print("4,4 -- ");
-        type = tileControl.getTileType4x4(ID);
+        type = tileControl.get4x4TileType(ID);
         
         if (count == 0){
             System.out.println("(0)COUNT: " + count);
@@ -1497,6 +1511,8 @@ public class GameBoard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
 
+    //===================================OTHER DEFINED SUBROUTINES==================================
+    
     // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
     public void showTileShape(int ID, int type){
         //first need to know which button to flip (ID), then what to change it to (type).
@@ -2180,6 +2196,7 @@ public class GameBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox DebugCheck;
     private javax.swing.JMenu FileMenu;
     private javax.swing.JMenu GameMenu;
     private javax.swing.JButton QuitButton;

@@ -5,6 +5,8 @@
  */
 package memorygame;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author reprise
@@ -30,45 +32,47 @@ public class GameBoard2 extends javax.swing.JFrame {
         ScoreScreenLabel = new javax.swing.JLabel();
         ScoreScreen = new javax.swing.JTextField();
         startGameButton = new javax.swing.JButton();
-        Tile11 = new javax.swing.JButton();
         Tile12 = new javax.swing.JButton();
         Tile13 = new javax.swing.JButton();
         Tile14 = new javax.swing.JButton();
         Tile15 = new javax.swing.JButton();
+        Tile11 = new javax.swing.JButton();
         Tile16 = new javax.swing.JButton();
-        Tile17 = new javax.swing.JButton();
-        Tile18 = new javax.swing.JButton();
-        Tile19 = new javax.swing.JButton();
-        Tile20 = new javax.swing.JButton();
-        Tile21 = new javax.swing.JButton();
         Tile22 = new javax.swing.JButton();
+        Tile26 = new javax.swing.JButton();
         Tile23 = new javax.swing.JButton();
         Tile24 = new javax.swing.JButton();
         Tile25 = new javax.swing.JButton();
-        Tile26 = new javax.swing.JButton();
-        Tile27 = new javax.swing.JButton();
-        Tile28 = new javax.swing.JButton();
-        Tile29 = new javax.swing.JButton();
-        Tile30 = new javax.swing.JButton();
-        Tile31 = new javax.swing.JButton();
+        Tile21 = new javax.swing.JButton();
         Tile32 = new javax.swing.JButton();
+        Tile36 = new javax.swing.JButton();
         Tile33 = new javax.swing.JButton();
         Tile34 = new javax.swing.JButton();
         Tile35 = new javax.swing.JButton();
-        Tile36 = new javax.swing.JButton();
-        Tile37 = new javax.swing.JButton();
-        Tile38 = new javax.swing.JButton();
-        Tile39 = new javax.swing.JButton();
-        Tile40 = new javax.swing.JButton();
-        Tile41 = new javax.swing.JButton();
+        Tile31 = new javax.swing.JButton();
         Tile42 = new javax.swing.JButton();
+        Tile46 = new javax.swing.JButton();
         Tile43 = new javax.swing.JButton();
         Tile44 = new javax.swing.JButton();
         Tile45 = new javax.swing.JButton();
-        Tile46 = new javax.swing.JButton();
+        Tile41 = new javax.swing.JButton();
+        Tile52 = new javax.swing.JButton();
+        Tile56 = new javax.swing.JButton();
+        Tile53 = new javax.swing.JButton();
+        Tile54 = new javax.swing.JButton();
+        Tile55 = new javax.swing.JButton();
+        Tile51 = new javax.swing.JButton();
+        Tile62 = new javax.swing.JButton();
+        Tile66 = new javax.swing.JButton();
+        Tile63 = new javax.swing.JButton();
+        Tile64 = new javax.swing.JButton();
+        Tile65 = new javax.swing.JButton();
+        Tile61 = new javax.swing.JButton();
         QuitButton = new javax.swing.JButton();
+        DebugCheck = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("6x6 Memory Game");
 
         ScoreScreenLabel.setFont(new java.awt.Font("FreeSerif", 1, 14)); // NOI18N
         ScoreScreenLabel.setText("SCORE:");
@@ -89,401 +93,221 @@ public class GameBoard2 extends javax.swing.JFrame {
             }
         });
 
-        Tile11.setEnabled(false);
-        Tile11.setFocusable(false);
-        Tile11.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile11.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile11.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile11ActionPerformed(evt);
-            }
-        });
-
         Tile12.setEnabled(false);
         Tile12.setFocusable(false);
         Tile12.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile12.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile12.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile12ActionPerformed(evt);
-            }
-        });
 
         Tile13.setEnabled(false);
         Tile13.setFocusable(false);
         Tile13.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile13.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile13.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile13ActionPerformed(evt);
-            }
-        });
 
         Tile14.setEnabled(false);
         Tile14.setFocusable(false);
         Tile14.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile14.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile14.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile14ActionPerformed(evt);
-            }
-        });
 
         Tile15.setEnabled(false);
         Tile15.setFocusable(false);
         Tile15.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile15.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile15.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile15ActionPerformed(evt);
-            }
-        });
+
+        Tile11.setEnabled(false);
+        Tile11.setFocusable(false);
+        Tile11.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile11.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile11.setPreferredSize(new java.awt.Dimension(30, 10));
 
         Tile16.setEnabled(false);
         Tile16.setFocusable(false);
         Tile16.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile16.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile16.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile16ActionPerformed(evt);
-            }
-        });
-
-        Tile17.setEnabled(false);
-        Tile17.setFocusable(false);
-        Tile17.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile17.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile17.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile17ActionPerformed(evt);
-            }
-        });
-
-        Tile18.setEnabled(false);
-        Tile18.setFocusable(false);
-        Tile18.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile18.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile18.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile18ActionPerformed(evt);
-            }
-        });
-
-        Tile19.setEnabled(false);
-        Tile19.setFocusable(false);
-        Tile19.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile19.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile19.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile19ActionPerformed(evt);
-            }
-        });
-
-        Tile20.setEnabled(false);
-        Tile20.setFocusable(false);
-        Tile20.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile20.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile20.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile20ActionPerformed(evt);
-            }
-        });
-
-        Tile21.setEnabled(false);
-        Tile21.setFocusable(false);
-        Tile21.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile21.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile21.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile21ActionPerformed(evt);
-            }
-        });
 
         Tile22.setEnabled(false);
         Tile22.setFocusable(false);
         Tile22.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile22.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile22.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile22ActionPerformed(evt);
-            }
-        });
-
-        Tile23.setEnabled(false);
-        Tile23.setFocusable(false);
-        Tile23.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile23.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile23.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile23ActionPerformed(evt);
-            }
-        });
-
-        Tile24.setEnabled(false);
-        Tile24.setFocusable(false);
-        Tile24.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile24.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile24.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile24ActionPerformed(evt);
-            }
-        });
-
-        Tile25.setEnabled(false);
-        Tile25.setFocusable(false);
-        Tile25.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile25.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile25.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile25ActionPerformed(evt);
-            }
-        });
 
         Tile26.setEnabled(false);
         Tile26.setFocusable(false);
         Tile26.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile26.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile26.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile26ActionPerformed(evt);
-            }
-        });
 
-        Tile27.setEnabled(false);
-        Tile27.setFocusable(false);
-        Tile27.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile27.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile27.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile27ActionPerformed(evt);
-            }
-        });
+        Tile23.setEnabled(false);
+        Tile23.setFocusable(false);
+        Tile23.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile23.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile23.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile28.setEnabled(false);
-        Tile28.setFocusable(false);
-        Tile28.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile28.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile28.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile28ActionPerformed(evt);
-            }
-        });
+        Tile24.setEnabled(false);
+        Tile24.setFocusable(false);
+        Tile24.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile24.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile24.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile29.setEnabled(false);
-        Tile29.setFocusable(false);
-        Tile29.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile29.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile29.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile29.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile29ActionPerformed(evt);
-            }
-        });
+        Tile25.setEnabled(false);
+        Tile25.setFocusable(false);
+        Tile25.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile25.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile25.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile30.setEnabled(false);
-        Tile30.setFocusable(false);
-        Tile30.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile30.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile30.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile30.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile30ActionPerformed(evt);
-            }
-        });
-
-        Tile31.setEnabled(false);
-        Tile31.setFocusable(false);
-        Tile31.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile31.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile31.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile31.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile31ActionPerformed(evt);
-            }
-        });
+        Tile21.setEnabled(false);
+        Tile21.setFocusable(false);
+        Tile21.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile21.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile21.setPreferredSize(new java.awt.Dimension(30, 10));
 
         Tile32.setEnabled(false);
         Tile32.setFocusable(false);
         Tile32.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile32.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile32.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile32ActionPerformed(evt);
-            }
-        });
-
-        Tile33.setEnabled(false);
-        Tile33.setFocusable(false);
-        Tile33.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile33.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile33.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile33ActionPerformed(evt);
-            }
-        });
-
-        Tile34.setEnabled(false);
-        Tile34.setFocusable(false);
-        Tile34.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile34.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile34.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile34.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile34ActionPerformed(evt);
-            }
-        });
-
-        Tile35.setEnabled(false);
-        Tile35.setFocusable(false);
-        Tile35.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile35.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile35.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile35.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile35ActionPerformed(evt);
-            }
-        });
 
         Tile36.setEnabled(false);
         Tile36.setFocusable(false);
         Tile36.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile36.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile36.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile36.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile36ActionPerformed(evt);
-            }
-        });
 
-        Tile37.setEnabled(false);
-        Tile37.setFocusable(false);
-        Tile37.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile37.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile37.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile37ActionPerformed(evt);
-            }
-        });
+        Tile33.setEnabled(false);
+        Tile33.setFocusable(false);
+        Tile33.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile33.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile33.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile38.setEnabled(false);
-        Tile38.setFocusable(false);
-        Tile38.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile38.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile38.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile38ActionPerformed(evt);
-            }
-        });
+        Tile34.setEnabled(false);
+        Tile34.setFocusable(false);
+        Tile34.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile34.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile34.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile39.setEnabled(false);
-        Tile39.setFocusable(false);
-        Tile39.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile39.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile39.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile39.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile39ActionPerformed(evt);
-            }
-        });
+        Tile35.setEnabled(false);
+        Tile35.setFocusable(false);
+        Tile35.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile35.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile35.setPreferredSize(new java.awt.Dimension(30, 10));
 
-        Tile40.setEnabled(false);
-        Tile40.setFocusable(false);
-        Tile40.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile40.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile40.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile40ActionPerformed(evt);
-            }
-        });
-
-        Tile41.setEnabled(false);
-        Tile41.setFocusable(false);
-        Tile41.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile41.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile41.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile41.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile41ActionPerformed(evt);
-            }
-        });
+        Tile31.setEnabled(false);
+        Tile31.setFocusable(false);
+        Tile31.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile31.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile31.setPreferredSize(new java.awt.Dimension(30, 10));
 
         Tile42.setEnabled(false);
         Tile42.setFocusable(false);
         Tile42.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile42.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile42.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile42ActionPerformed(evt);
-            }
-        });
-
-        Tile43.setEnabled(false);
-        Tile43.setFocusable(false);
-        Tile43.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile43.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile43.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile43ActionPerformed(evt);
-            }
-        });
-
-        Tile44.setEnabled(false);
-        Tile44.setFocusable(false);
-        Tile44.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile44.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile44.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile44ActionPerformed(evt);
-            }
-        });
-
-        Tile45.setEnabled(false);
-        Tile45.setFocusable(false);
-        Tile45.setMaximumSize(new java.awt.Dimension(32, 10));
-        Tile45.setMinimumSize(new java.awt.Dimension(32, 10));
-        Tile45.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile45ActionPerformed(evt);
-            }
-        });
 
         Tile46.setEnabled(false);
         Tile46.setFocusable(false);
         Tile46.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile46.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile46.setPreferredSize(new java.awt.Dimension(30, 10));
-        Tile46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tile46ActionPerformed(evt);
-            }
-        });
+
+        Tile43.setEnabled(false);
+        Tile43.setFocusable(false);
+        Tile43.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile43.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile43.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile44.setEnabled(false);
+        Tile44.setFocusable(false);
+        Tile44.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile44.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile44.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile45.setEnabled(false);
+        Tile45.setFocusable(false);
+        Tile45.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile45.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile45.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile41.setEnabled(false);
+        Tile41.setFocusable(false);
+        Tile41.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile41.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile41.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile52.setEnabled(false);
+        Tile52.setFocusable(false);
+        Tile52.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile52.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile52.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile56.setEnabled(false);
+        Tile56.setFocusable(false);
+        Tile56.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile56.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile56.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile53.setEnabled(false);
+        Tile53.setFocusable(false);
+        Tile53.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile53.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile53.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile54.setEnabled(false);
+        Tile54.setFocusable(false);
+        Tile54.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile54.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile54.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile55.setEnabled(false);
+        Tile55.setFocusable(false);
+        Tile55.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile55.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile55.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile51.setEnabled(false);
+        Tile51.setFocusable(false);
+        Tile51.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile51.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile51.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile62.setEnabled(false);
+        Tile62.setFocusable(false);
+        Tile62.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile62.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile62.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile66.setEnabled(false);
+        Tile66.setFocusable(false);
+        Tile66.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile66.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile66.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile63.setEnabled(false);
+        Tile63.setFocusable(false);
+        Tile63.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile63.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile63.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile64.setEnabled(false);
+        Tile64.setFocusable(false);
+        Tile64.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile64.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile64.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile65.setEnabled(false);
+        Tile65.setFocusable(false);
+        Tile65.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile65.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile65.setPreferredSize(new java.awt.Dimension(30, 10));
+
+        Tile61.setEnabled(false);
+        Tile61.setFocusable(false);
+        Tile61.setMaximumSize(new java.awt.Dimension(32, 10));
+        Tile61.setMinimumSize(new java.awt.Dimension(32, 10));
+        Tile61.setPreferredSize(new java.awt.Dimension(30, 10));
 
         QuitButton.setText("QUIT");
         QuitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -491,6 +315,9 @@ public class GameBoard2 extends javax.swing.JFrame {
                 QuitButtonActionPerformed(evt);
             }
         });
+
+        DebugCheck.setText("Debug");
+        DebugCheck.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -500,90 +327,97 @@ public class GameBoard2 extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Tile46, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addComponent(startGameButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(QuitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile45, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(Tile40, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Tile35, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Tile37, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Tile38, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Tile39, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Tile36, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 32, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(DebugCheck))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Tile61, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile62, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile63, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile64, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile65, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile66, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile18, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Tile28, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile25, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile26, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile27, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Tile26, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile29, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile30, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile35, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile36, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(ScoreScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(8, 8, 8)
-                                        .addComponent(startGameButton)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(QuitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Tile15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Tile16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                                .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile45, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile46, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Tile51, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile52, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile55, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Tile56, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -597,54 +431,55 @@ public class GameBoard2 extends javax.swing.JFrame {
                             .addComponent(ScoreScreenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(startGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(QuitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(QuitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(DebugCheck)))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Tile12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Tile13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tile15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Tile15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tile14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tile11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile18, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile26, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile25, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile27, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile26, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile28, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Tile30, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile29, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tile24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Tile36, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile35, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile37, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile39, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile38, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile40, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tile34, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Tile46, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile42, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile43, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile45, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile44, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tile46, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tile41, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Tile56, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile52, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile55, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile51, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Tile66, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile62, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile63, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile65, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile64, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tile61, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -653,200 +488,794 @@ public class GameBoard2 extends javax.swing.JFrame {
 
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
         System.out.println("============NEW=GAME============");
-//
-//        PrevID_Guess1 = 100;
-//        PrevID_Guess2 = 100;
-//        ID_Guess1 = 100;
-//        ID_Guess2 = 100;
-//        match = false;
-//        count = 0;
-//        score = 0;
-//        sScore = "0";
-//
-//        ScoreScreen.setText(sScore);
-//
-//        //Re-Enable the buttons.
-//        Tile11.setEnabled(true);
-//        Tile12.setEnabled(true);
-//        Tile13.setEnabled(true);
-//        Tile14.setEnabled(true);
-//        Tile21.setEnabled(true);
-//        Tile22.setEnabled(true);
-//        Tile23.setEnabled(true);
-//        Tile24.setEnabled(true);
-//        Tile31.setEnabled(true);
-//        Tile32.setEnabled(true);
-//        Tile33.setEnabled(true);
-//        Tile34.setEnabled(true);
-//        Tile41.setEnabled(true);
-//        Tile42.setEnabled(true);
-//        Tile43.setEnabled(true);
-//        Tile44.setEnabled(true);
-//
-//        //Set the icons to be Blank.  (TEMPORARY)
-//        wipeBoard();
-//
-//        //generate random #'s and assign them to shapes as IDs.
-//        tileControl.initShuffleTiles4x4();
-//        for (int i = 0; i<= 15; i++){
-//            System.out.print(i + ": ");
-//            int type = tileControl.getTileType4x4(i);
-//        }
-//        System.out.println();
+
+        PrevID_Guess1 = 100;
+        PrevID_Guess2 = 100;
+        ID_Guess1 = 100;
+        ID_Guess2 = 100;
+        match = false;
+        count = 0;
+        score = 0;
+        sScore = "0";
+
+        ScoreScreen.setText(sScore);
+
+        //Re-Enable the buttons.
+        Tile11.setEnabled(true);
+        Tile12.setEnabled(true);
+        Tile13.setEnabled(true);
+        Tile14.setEnabled(true);
+        Tile15.setEnabled(true);
+        Tile16.setEnabled(true);
+        Tile21.setEnabled(true);
+        Tile22.setEnabled(true);
+        Tile23.setEnabled(true);
+        Tile24.setEnabled(true);
+        Tile25.setEnabled(true);
+        Tile26.setEnabled(true);
+        Tile31.setEnabled(true);
+        Tile32.setEnabled(true);
+        Tile33.setEnabled(true);
+        Tile34.setEnabled(true);
+        Tile35.setEnabled(true);
+        Tile36.setEnabled(true);
+        Tile41.setEnabled(true);
+        Tile42.setEnabled(true);
+        Tile43.setEnabled(true);
+        Tile44.setEnabled(true);
+        Tile45.setEnabled(true);
+        Tile46.setEnabled(true);
+        Tile51.setEnabled(true);
+        Tile52.setEnabled(true);
+        Tile53.setEnabled(true);
+        Tile54.setEnabled(true);
+        Tile55.setEnabled(true);
+        Tile56.setEnabled(true);
+        Tile61.setEnabled(true);
+        Tile62.setEnabled(true);
+        Tile63.setEnabled(true);
+        Tile64.setEnabled(true);
+        Tile65.setEnabled(true);
+        Tile66.setEnabled(true);
+        
+
+        //Set the icons to be Blank.  (TEMPORARY)
+        wipeBoard();
+
+        //generate random #'s and assign them to shapes as IDs.
+        tileControl.initShuffle6x6Tiles();
+        for (int i = 0; i<= 35; i++){
+            System.out.print(i + ": ");
+            int type = tileControl.get6x6TileType(i);
+            
+            //will show all the shapes on the buttons, for debugging reasons.
+            if (DebugCheck.isSelected()){
+                showTileShape(i, type);
+            }
+        }
+        System.out.println();
 
     }//GEN-LAST:event_startGameButtonActionPerformed
-
-    private void Tile11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile11ActionPerformed
-
-    }//GEN-LAST:event_Tile11ActionPerformed
-
-    private void Tile12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile12ActionPerformed
-
-    private void Tile13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile13ActionPerformed
-
-    private void Tile14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile14ActionPerformed
-
-    private void Tile15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile15ActionPerformed
-
-    private void Tile16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile16ActionPerformed
-
-    private void Tile17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile17ActionPerformed
-
-    private void Tile18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile18ActionPerformed
-
-    private void Tile19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile19ActionPerformed
-
-    private void Tile20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile20ActionPerformed
-
-    private void Tile21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile21ActionPerformed
-
-    private void Tile22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile22ActionPerformed
-
-    private void Tile23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile23ActionPerformed
-
-    private void Tile24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile24ActionPerformed
-
-    private void Tile25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile25ActionPerformed
-
-    private void Tile26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile26ActionPerformed
-
-    private void Tile27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile27ActionPerformed
-
-    private void Tile28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile28ActionPerformed
-
-    private void Tile29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile29ActionPerformed
-
-    private void Tile30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile30ActionPerformed
-
-    private void Tile31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile31ActionPerformed
-
-    private void Tile32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile32ActionPerformed
-
-    private void Tile33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile33ActionPerformed
-
-    private void Tile34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile34ActionPerformed
-
-    private void Tile35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile35ActionPerformed
-
-    private void Tile36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile36ActionPerformed
-
-    private void Tile37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile37ActionPerformed
-
-    private void Tile38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile38ActionPerformed
-
-    private void Tile39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile39ActionPerformed
-
-    private void Tile40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile40ActionPerformed
-
-    private void Tile41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile41ActionPerformed
-
-    private void Tile42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile42ActionPerformed
-
-    private void Tile43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile43ActionPerformed
-
-    private void Tile44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile44ActionPerformed
-
-    private void Tile45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile45ActionPerformed
-
-    private void Tile46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tile46ActionPerformed
 
     private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
+    
+    //====================================OTHER DEFINED SUBROUTINES==================================
+    
+    // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
+    public void showTileShape(int ID, int type){
+        //first need to know which button to flip (ID), then what to change it to (type).
+            if (ID == 0){
+                switch(type){
+                    case 0:
+                        Tile11.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile11.setIcon(Cross);        
+                        break;
+                    case 2:
+                        Tile11.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile11.setIcon(Dice);
+                        break;
+                    case 4:
+                        Tile11.setIcon(Donut);
+                        break;
+                    case 5:
+                        Tile11.setIcon(Eclipse);
+                        break;
+                    case 6:
+                        Tile11.setIcon(Eclipse2);
+                        break;
+                    case 7:
+                        Tile11.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile11.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile11.setIcon(L);
+                        break;
+                    case 10:
+                        Tile11.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile11.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile11.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile11.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile11.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile11.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile11.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile11.setIcon(X);
+                        break;     
+                }
+            }
+            else if (ID == 1){
+                switch(type){
+                    case 0:
+                        Tile12.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile12.setIcon(Cross);        
+                        break;
+                    case 2:
+                        Tile12.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile12.setIcon(Dice);
+                        break;
+                    case 4:
+                        Tile12.setIcon(Donut);
+                        break;
+                    case 5:
+                        Tile12.setIcon(Eclipse);
+                        break;
+                    case 6:
+                        Tile12.setIcon(Eclipse2);
+                        break;
+                    case 7:
+                        Tile12.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile12.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile12.setIcon(L);
+                        break;
+                    case 10:
+                        Tile12.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile12.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile12.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile12.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile12.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile12.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile12.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile12.setIcon(X);
+                        break;     
+                }       
+            }
+            //I stopped here.  the below is copied from 4x4, the above works for 6x6.  in this sub.
+            else if (ID == 2){
+                switch(type){
+                    case 0:
+                        Tile13.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile13.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile13.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile13.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile13.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile13.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile13.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile13.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 3){
+                switch(type){
+                    case 0:
+                        Tile14.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile14.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile14.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile14.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile14.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile14.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile14.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile14.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 4){
+                switch(type){
+                    case 0:
+                        Tile21.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile21.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile21.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile21.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile21.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile21.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile21.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile21.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 5){
+                switch(type){
+                    case 0:
+                        Tile22.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile22.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile22.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile22.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile22.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile22.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile22.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile22.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 6){
+                switch(type){
+                    case 0:
+                        Tile23.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile23.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile23.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile23.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile23.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile23.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile23.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile23.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 7){
+                switch(type){
+                    case 0:
+                        Tile24.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile24.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile24.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile24.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile24.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile24.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile24.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile24.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 8){
+                switch(type){
+                    case 0:
+                        Tile31.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile31.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile31.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile31.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile31.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile31.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile31.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile31.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 9){
+                switch(type){
+                    case 0:
+                        Tile32.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile32.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile32.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile32.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile32.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile32.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile32.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile32.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 10){
+                switch(type){
+                    case 0:
+                        Tile33.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile33.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile33.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile33.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile33.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile33.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile33.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile33.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 11){
+                switch(type){
+                    case 0:
+                        Tile34.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile34.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile34.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile34.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile34.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile34.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile34.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile34.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 12){
+                switch(type){
+                    case 0:
+                        Tile41.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile41.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile41.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile41.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile41.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile41.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile41.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile41.setIcon(X);
+                        break; 
+                }       
+            }
+             else if (ID == 13){
+                switch(type){
+                    case 0:
+                        Tile42.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile42.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile42.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile42.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile42.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile42.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile42.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile42.setIcon(X);
+                        break; 
+                }       
+            }
+             else if (ID == 14){
+                switch(type){
+                    case 0:
+                        Tile43.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile43.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile43.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile43.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile43.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile43.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile43.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile43.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 15){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
+    }
+    
+    //Sets the icons to all of the buttons to BlankTile.png. Doesn't reset the actual game.
+    public void wipeBoard(){
+        Tile11.setIcon(Blank);
+        Tile12.setIcon(Blank);
+        Tile13.setIcon(Blank);
+        Tile14.setIcon(Blank);
+        Tile21.setIcon(Blank);
+        Tile22.setIcon(Blank);
+        Tile23.setIcon(Blank);
+        Tile24.setIcon(Blank);
+        Tile31.setIcon(Blank);
+        Tile32.setIcon(Blank);
+        Tile33.setIcon(Blank);
+        Tile34.setIcon(Blank);
+        Tile41.setIcon(Blank);
+        Tile42.setIcon(Blank);
+        Tile43.setIcon(Blank);
+        Tile44.setIcon(Blank);
+    }
+    
+    //do the 2 buttons chosen have matching shapes?
+    public boolean testMatch(int type1, int type2){
+        boolean match = false;
+        
+        if (type1 == type2){
+            match = true;
+        }
+        
+        return match;
+    }
+    
+    //Hide the shape and set icon to blank a particular button/Tile.
+    public void hideSelectedTile(int ID){
+        switch(ID){
+            case 0:
+                Tile11.setIcon(Blank);
+                break;
+            case 1:
+                Tile12.setIcon(Blank);
+                break;
+            case 2:
+                Tile13.setIcon(Blank);
+                break;
+            case 3: 
+                Tile14.setIcon(Blank);
+                break;
+            case 4:
+                Tile21.setIcon(Blank);
+                break;
+            case 5:
+                Tile22.setIcon(Blank);
+                break;
+            case 6:
+                Tile23.setIcon(Blank);
+                break;
+            case 7:
+                Tile24.setIcon(Blank);
+                break;
+            case 8:
+                Tile31.setIcon(Blank);
+                break;
+            case 9:
+                Tile32.setIcon(Blank);
+                break;
+            case 10:
+                Tile33.setIcon(Blank);
+                break;
+            case 11:
+                Tile34.setIcon(Blank);
+                break;
+            case 12:
+                Tile41.setIcon(Blank);
+                break;
+            case 13:
+                Tile42.setIcon(Blank);
+                break;
+            case 14:
+                Tile43.setIcon(Blank);
+                break;
+            case 15:
+                Tile44.setIcon(Blank);
+                break;       
+        }
+    }
+    
+    //enable or disable a button. (enable when it's blank [again], & disable when a shape is showing.)
+    public void buttonEnabledSwitch(boolean state, int ID){
+        if (state){
+            //then enable the button at the passed ID.
+            switch(ID){
+                case 0:
+                    Tile11.setEnabled(true);
+                    break;
+                case 1:
+                    Tile12.setEnabled(true);
+                    break;
+                case 2:
+                    Tile13.setEnabled(true);
+                    break;
+                case 3:
+                    Tile14.setEnabled(true);
+                    break;
+                case 4:
+                    Tile21.setEnabled(true);
+                    break;
+                case 5:
+                    Tile22.setEnabled(true);
+                    break;
+                case 6:
+                    Tile23.setEnabled(true);
+                    break;
+                case 7:
+                    Tile24.setEnabled(true);
+                    break;
+                case 8:
+                    Tile31.setEnabled(true);
+                    break;
+                case 9:
+                    Tile32.setEnabled(true);
+                    break;
+                case 10:
+                    Tile33.setEnabled(true);
+                    break;
+                case 11:
+                    Tile34.setEnabled(true);
+                    break;
+                case 12:
+                    Tile41.setEnabled(true);
+                    break;
+                case 13:
+                    Tile42.setEnabled(true);
+                    break;
+                case 14:
+                    Tile43.setEnabled(true);
+                    break;
+                case 15:
+                    Tile44.setEnabled(true);
+                    break;    
+            }
+        }
+        else{
+            //then disable the button at the passed ID.
+            switch(ID){
+                case 0:
+                    Tile11.setEnabled(false);
+                    
+                    break;
+                case 1:
+                    Tile12.setEnabled(false);
+                    break;
+                case 2:
+                    Tile13.setEnabled(false);
+                    break;
+                case 3:
+                    Tile14.setEnabled(false);
+                    break;
+                case 4:
+                    Tile21.setEnabled(false);
+                    break;
+                case 5:
+                    Tile22.setEnabled(false);
+                    break;
+                case 6:
+                    Tile23.setEnabled(false);
+                    break;
+                case 7:
+                    Tile24.setEnabled(false);
+                    break;
+                case 8:
+                    Tile31.setEnabled(false);
+                    break;
+                case 9:
+                    Tile32.setEnabled(false);
+                    break;
+                case 10:
+                    Tile33.setEnabled(false);
+                    break;
+                case 11:
+                    Tile34.setEnabled(false);
+                    break;
+                case 12:
+                    Tile41.setEnabled(false);
+                    break;
+                case 13:
+                    Tile42.setEnabled(false);
+                    break;
+                case 14:
+                    Tile43.setEnabled(false);
+                    break;
+                case 15:
+                    Tile44.setEnabled(false);
+                    break;    
+            }             
+        }   
+    }
+    
+    //===============================================================================================
+    
+    //
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -880,6 +1309,7 @@ public class GameBoard2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox DebugCheck;
     private javax.swing.JButton QuitButton;
     private javax.swing.JTextField ScoreScreen;
     private javax.swing.JLabel ScoreScreenLabel;
@@ -889,36 +1319,68 @@ public class GameBoard2 extends javax.swing.JFrame {
     private javax.swing.JButton Tile14;
     private javax.swing.JButton Tile15;
     private javax.swing.JButton Tile16;
-    private javax.swing.JButton Tile17;
-    private javax.swing.JButton Tile18;
-    private javax.swing.JButton Tile19;
-    private javax.swing.JButton Tile20;
     private javax.swing.JButton Tile21;
     private javax.swing.JButton Tile22;
     private javax.swing.JButton Tile23;
     private javax.swing.JButton Tile24;
     private javax.swing.JButton Tile25;
     private javax.swing.JButton Tile26;
-    private javax.swing.JButton Tile27;
-    private javax.swing.JButton Tile28;
-    private javax.swing.JButton Tile29;
-    private javax.swing.JButton Tile30;
     private javax.swing.JButton Tile31;
     private javax.swing.JButton Tile32;
     private javax.swing.JButton Tile33;
     private javax.swing.JButton Tile34;
     private javax.swing.JButton Tile35;
     private javax.swing.JButton Tile36;
-    private javax.swing.JButton Tile37;
-    private javax.swing.JButton Tile38;
-    private javax.swing.JButton Tile39;
-    private javax.swing.JButton Tile40;
     private javax.swing.JButton Tile41;
     private javax.swing.JButton Tile42;
     private javax.swing.JButton Tile43;
     private javax.swing.JButton Tile44;
     private javax.swing.JButton Tile45;
     private javax.swing.JButton Tile46;
+    private javax.swing.JButton Tile51;
+    private javax.swing.JButton Tile52;
+    private javax.swing.JButton Tile53;
+    private javax.swing.JButton Tile54;
+    private javax.swing.JButton Tile55;
+    private javax.swing.JButton Tile56;
+    private javax.swing.JButton Tile61;
+    private javax.swing.JButton Tile62;
+    private javax.swing.JButton Tile63;
+    private javax.swing.JButton Tile64;
+    private javax.swing.JButton Tile65;
+    private javax.swing.JButton Tile66;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
+    
+    //GLOBALS
+    TileControl tileControl = new TileControl();
+
+    ImageIcon Blank     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/blankTile.png"));
+    ImageIcon Circle    = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Circle.png"));
+    ImageIcon Cross     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Cross.png"));
+    ImageIcon Diamond   = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Diamond.png"));
+    ImageIcon Dice      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Dice.png"));
+    ImageIcon Donut     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Donut.png"));
+    ImageIcon Eclipse   = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Eclipse.png"));
+    ImageIcon Eclipse2  = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Eclipse2.png"));
+    ImageIcon Grapes    = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Grapes.png"));
+    ImageIcon Heart     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Heart.png"));
+    ImageIcon L         = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/L.png"));
+    ImageIcon Rectangle = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Rectangle.png"));
+    ImageIcon Snowflake = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Snowflake.png"));
+    ImageIcon SqDonut   = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/SqDonut.png"));
+    ImageIcon Square    = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Square.png"));
+    ImageIcon Star      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Star.png"));
+    ImageIcon Tear      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Tear.png"));
+    ImageIcon Triangle  = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Triangle.png"));
+    ImageIcon X         = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/X.png"));
+    
+    int count = 0;                              //1 for first tile flipped, 2 for second.  if 2, check match.
+    int ID_Guess1 = 100, ID_Guess2 = 100;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
+    int type_Guess1, type_Guess2;               //the ShapeCodes for the 2 guesses.  used for testing a match. 
+    boolean match;                              //catches the result from testMatch sub.
+    int score;                                  //saves the player's score
+    String sScore;                              //to be sent to the label.
+    int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
+    int PrevID_Guess2;                          //return to blanks when a new matching has started.
 }
