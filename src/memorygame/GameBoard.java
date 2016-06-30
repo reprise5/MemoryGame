@@ -370,7 +370,7 @@ public class GameBoard extends javax.swing.JFrame {
             int type = tileControl.get4x4TileType(i);
             
             //will show all the shapes on the buttons, for debugging reasons.
-            //check the box, and THEN click start for it to work.
+            //check the box, and THEN click start for it to work. 
             if (DebugCheck.isSelected()){
                 showTileShape(i, type);
             }

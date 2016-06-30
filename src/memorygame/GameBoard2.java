@@ -682,33 +682,62 @@ public class GameBoard2 extends javax.swing.JFrame {
                         break;     
                 }       
             }
-            //I stopped here.  the below is copied from 4x4, the above works for 6x6.  in this sub.
             else if (ID == 2){
                 switch(type){
                     case 0:
                         Tile13.setIcon(Circle);
                         break;
                     case 1:
-                        Tile13.setIcon(Cross);
+                        Tile13.setIcon(Cross);        
                         break;
                     case 2:
                         Tile13.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile13.setIcon(Donut);
+                        Tile13.setIcon(Dice);
                         break;
                     case 4:
-                        Tile13.setIcon(Eclipse);
+                        Tile13.setIcon(Donut);
                         break;
                     case 5:
-                        Tile13.setIcon(Square);
+                        Tile13.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile13.setIcon(Star);
+                        Tile13.setIcon(Eclipse2);
                         break;
                     case 7:
+                        Tile13.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile13.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile13.setIcon(L);
+                        break;
+                    case 10:
+                        Tile13.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile13.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile13.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile13.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile13.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile13.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile13.setIcon(Triangle);
+                        break;
+                    case 17:
                         Tile13.setIcon(X);
-                        break; 
+                        break;     
                 }       
             }
             else if (ID == 3){
@@ -717,337 +746,867 @@ public class GameBoard2 extends javax.swing.JFrame {
                         Tile14.setIcon(Circle);
                         break;
                     case 1:
-                        Tile14.setIcon(Cross);
+                        Tile14.setIcon(Cross);        
                         break;
                     case 2:
                         Tile14.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile14.setIcon(Donut);
+                        Tile14.setIcon(Dice);
                         break;
                     case 4:
-                        Tile14.setIcon(Eclipse);
+                        Tile14.setIcon(Donut);
                         break;
                     case 5:
-                        Tile14.setIcon(Square);
+                        Tile14.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile14.setIcon(Star);
+                        Tile14.setIcon(Eclipse2);
                         break;
                     case 7:
+                        Tile14.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile14.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile14.setIcon(L);
+                        break;
+                    case 10:
+                        Tile14.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile14.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile14.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile14.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile14.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile14.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile14.setIcon(Triangle);
+                        break;
+                    case 17:
                         Tile14.setIcon(X);
-                        break; 
+                        break;     
                 }       
             }
             else if (ID == 4){
                 switch(type){
                     case 0:
-                        Tile21.setIcon(Circle);
+                        Tile15.setIcon(Circle);
                         break;
                     case 1:
-                        Tile21.setIcon(Cross);
+                        Tile15.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile21.setIcon(Diamond);
+                        Tile15.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile21.setIcon(Donut);
+                        Tile15.setIcon(Dice);
                         break;
                     case 4:
-                        Tile21.setIcon(Eclipse);
+                        Tile15.setIcon(Donut);
                         break;
                     case 5:
-                        Tile21.setIcon(Square);
+                        Tile15.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile21.setIcon(Star);
+                        Tile15.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile21.setIcon(X);
-                        break; 
+                        Tile15.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile15.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile15.setIcon(L);
+                        break;
+                    case 10:
+                        Tile15.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile15.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile15.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile15.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile15.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile15.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile15.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile15.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 5){
                 switch(type){
                     case 0:
-                        Tile22.setIcon(Circle);
+                        Tile16.setIcon(Circle);
                         break;
                     case 1:
-                        Tile22.setIcon(Cross);
+                        Tile16.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile22.setIcon(Diamond);
+                        Tile16.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile22.setIcon(Donut);
+                        Tile16.setIcon(Dice);
                         break;
                     case 4:
-                        Tile22.setIcon(Eclipse);
+                        Tile16.setIcon(Donut);
                         break;
                     case 5:
-                        Tile22.setIcon(Square);
+                        Tile16.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile22.setIcon(Star);
+                        Tile16.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile22.setIcon(X);
-                        break; 
+                        Tile16.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile16.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile16.setIcon(L);
+                        break;
+                    case 10:
+                        Tile16.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile16.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile16.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile16.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile16.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile16.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile16.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile16.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 6){
                 switch(type){
                     case 0:
-                        Tile23.setIcon(Circle);
+                        Tile21.setIcon(Circle);
                         break;
                     case 1:
-                        Tile23.setIcon(Cross);
+                        Tile21.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile23.setIcon(Diamond);
+                        Tile21.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile23.setIcon(Donut);
+                        Tile21.setIcon(Dice);
                         break;
                     case 4:
-                        Tile23.setIcon(Eclipse);
+                        Tile21.setIcon(Donut);
                         break;
                     case 5:
-                        Tile23.setIcon(Square);
+                        Tile21.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile23.setIcon(Star);
+                        Tile21.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile23.setIcon(X);
-                        break; 
+                        Tile21.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile21.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile21.setIcon(L);
+                        break;
+                    case 10:
+                        Tile21.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile21.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile21.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile21.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile21.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile21.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile21.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile21.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 7){
                 switch(type){
                     case 0:
-                        Tile24.setIcon(Circle);
+                        Tile22.setIcon(Circle);
                         break;
                     case 1:
-                        Tile24.setIcon(Cross);
+                        Tile22.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile24.setIcon(Diamond);
+                        Tile22.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile24.setIcon(Donut);
+                        Tile22.setIcon(Dice);
                         break;
                     case 4:
-                        Tile24.setIcon(Eclipse);
+                        Tile22.setIcon(Donut);
                         break;
                     case 5:
-                        Tile24.setIcon(Square);
+                        Tile22.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile24.setIcon(Star);
+                        Tile22.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile24.setIcon(X);
-                        break; 
+                        Tile22.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile22.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile22.setIcon(L);
+                        break;
+                    case 10:
+                        Tile22.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile22.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile22.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile22.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile22.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile22.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile22.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile22.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 8){
                 switch(type){
                     case 0:
-                        Tile31.setIcon(Circle);
+                        Tile23.setIcon(Circle);
                         break;
                     case 1:
-                        Tile31.setIcon(Cross);
+                        Tile23.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile31.setIcon(Diamond);
+                        Tile23.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile31.setIcon(Donut);
+                        Tile23.setIcon(Dice);
                         break;
                     case 4:
-                        Tile31.setIcon(Eclipse);
+                        Tile23.setIcon(Donut);
                         break;
                     case 5:
-                        Tile31.setIcon(Square);
+                        Tile23.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile31.setIcon(Star);
+                        Tile23.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile31.setIcon(X);
-                        break; 
+                        Tile23.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile23.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile23.setIcon(L);
+                        break;
+                    case 10:
+                        Tile23.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile23.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile23.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile23.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile23.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile23.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile23.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile23.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 9){
                 switch(type){
                     case 0:
-                        Tile32.setIcon(Circle);
+                        Tile24.setIcon(Circle);
                         break;
                     case 1:
-                        Tile32.setIcon(Cross);
+                        Tile24.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile32.setIcon(Diamond);
+                        Tile24.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile32.setIcon(Donut);
+                        Tile24.setIcon(Dice);
                         break;
                     case 4:
-                        Tile32.setIcon(Eclipse);
+                        Tile24.setIcon(Donut);
                         break;
                     case 5:
-                        Tile32.setIcon(Square);
+                        Tile24.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile32.setIcon(Star);
+                        Tile24.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile32.setIcon(X);
-                        break; 
+                        Tile24.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile24.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile24.setIcon(L);
+                        break;
+                    case 10:
+                        Tile24.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile24.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile24.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile24.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile24.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile24.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile24.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile24.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 10){
                 switch(type){
                     case 0:
-                        Tile33.setIcon(Circle);
+                        Tile25.setIcon(Circle);
                         break;
                     case 1:
-                        Tile33.setIcon(Cross);
+                        Tile25.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile33.setIcon(Diamond);
+                        Tile25.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile33.setIcon(Donut);
+                        Tile25.setIcon(Dice);
                         break;
                     case 4:
-                        Tile33.setIcon(Eclipse);
+                        Tile25.setIcon(Donut);
                         break;
                     case 5:
-                        Tile33.setIcon(Square);
+                        Tile25.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile33.setIcon(Star);
+                        Tile25.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile33.setIcon(X);
-                        break; 
+                        Tile25.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile25.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile25.setIcon(L);
+                        break;
+                    case 10:
+                        Tile25.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile25.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile25.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile25.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile25.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile25.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile25.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile25.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 11){
                 switch(type){
                     case 0:
-                        Tile34.setIcon(Circle);
+                        Tile26.setIcon(Circle);
                         break;
                     case 1:
-                        Tile34.setIcon(Cross);
+                        Tile26.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile34.setIcon(Diamond);
+                        Tile26.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile34.setIcon(Donut);
+                        Tile26.setIcon(Dice);
                         break;
                     case 4:
-                        Tile34.setIcon(Eclipse);
+                        Tile26.setIcon(Donut);
                         break;
                     case 5:
-                        Tile34.setIcon(Square);
+                        Tile26.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile34.setIcon(Star);
+                        Tile26.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile34.setIcon(X);
-                        break; 
+                        Tile26.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile26.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile26.setIcon(L);
+                        break;
+                    case 10:
+                        Tile26.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile26.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile26.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile26.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile26.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile26.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile26.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile26.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 12){
                 switch(type){
                     case 0:
-                        Tile41.setIcon(Circle);
+                        Tile31.setIcon(Circle);
                         break;
                     case 1:
-                        Tile41.setIcon(Cross);
+                        Tile31.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile41.setIcon(Diamond);
+                        Tile31.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile41.setIcon(Donut);
+                        Tile31.setIcon(Dice);
                         break;
                     case 4:
-                        Tile41.setIcon(Eclipse);
+                        Tile31.setIcon(Donut);
                         break;
                     case 5:
-                        Tile41.setIcon(Square);
+                        Tile31.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile41.setIcon(Star);
+                        Tile31.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile41.setIcon(X);
-                        break; 
+                        Tile31.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile31.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile31.setIcon(L);
+                        break;
+                    case 10:
+                        Tile31.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile31.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile31.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile31.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile31.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile31.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile31.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile31.setIcon(X);
+                        break;     
                 }       
             }
              else if (ID == 13){
                 switch(type){
                     case 0:
-                        Tile42.setIcon(Circle);
+                        Tile32.setIcon(Circle);
                         break;
                     case 1:
-                        Tile42.setIcon(Cross);
+                        Tile32.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile42.setIcon(Diamond);
+                        Tile32.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile42.setIcon(Donut);
+                        Tile32.setIcon(Dice);
                         break;
                     case 4:
-                        Tile42.setIcon(Eclipse);
+                        Tile32.setIcon(Donut);
                         break;
                     case 5:
-                        Tile42.setIcon(Square);
+                        Tile32.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile42.setIcon(Star);
+                        Tile32.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile42.setIcon(X);
-                        break; 
+                        Tile32.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile32.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile32.setIcon(L);
+                        break;
+                    case 10:
+                        Tile32.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile32.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile32.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile32.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile32.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile32.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile32.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile32.setIcon(X);
+                        break;     
                 }       
             }
              else if (ID == 14){
                 switch(type){
                     case 0:
-                        Tile43.setIcon(Circle);
+                        Tile33.setIcon(Circle);
                         break;
                     case 1:
-                        Tile43.setIcon(Cross);
+                        Tile33.setIcon(Cross);        
                         break;
                     case 2:
-                        Tile43.setIcon(Diamond);
+                        Tile33.setIcon(Diamond);
                         break;
                     case 3:
-                        Tile43.setIcon(Donut);
+                        Tile33.setIcon(Dice);
                         break;
                     case 4:
-                        Tile43.setIcon(Eclipse);
+                        Tile33.setIcon(Donut);
                         break;
                     case 5:
-                        Tile43.setIcon(Square);
+                        Tile33.setIcon(Eclipse);
                         break;
                     case 6:
-                        Tile43.setIcon(Star);
+                        Tile33.setIcon(Eclipse2);
                         break;
                     case 7:
-                        Tile43.setIcon(X);
-                        break; 
+                        Tile33.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile33.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile33.setIcon(L);
+                        break;
+                    case 10:
+                        Tile33.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile33.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile33.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile33.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile33.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile33.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile33.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile33.setIcon(X);
+                        break;     
                 }       
             }
             else if (ID == 15){
+                switch(type){
+                    case 0:
+                        Tile34.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile34.setIcon(Cross);        
+                        break;
+                    case 2:
+                        Tile34.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile34.setIcon(Dice);
+                        break;
+                    case 4:
+                        Tile34.setIcon(Donut);
+                        break;
+                    case 5:
+                        Tile34.setIcon(Eclipse);
+                        break;
+                    case 6:
+                        Tile34.setIcon(Eclipse2);
+                        break;
+                    case 7:
+                        Tile34.setIcon(Grapes);
+                        break;
+                    case 8:
+                        Tile34.setIcon(Heart);
+                        break;
+                    case 9:
+                        Tile34.setIcon(L);
+                        break;
+                    case 10:
+                        Tile34.setIcon(Rectangle);
+                        break;
+                    case 11:
+                        Tile34.setIcon(Snowflake);
+                        break;
+                    case 12:
+                        Tile34.setIcon(SqDonut);
+                        break;
+                    case 13:
+                        Tile34.setIcon(Square);
+                        break;
+                    case 14:
+                        Tile34.setIcon(Star);
+                        break;
+                    case 15:
+                        Tile34.setIcon(Tear);
+                        break;
+                    case 16:
+                        Tile34.setIcon(Triangle);
+                        break;
+                    case 17:
+                        Tile34.setIcon(X);
+                        break;     
+                }             
+            }
+            else if (ID == 16){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 17){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 18){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 19){
+                switch(type){
+                    case 0:
+                        Tile44.setIcon(Circle);
+                        break;
+                    case 1:
+                        Tile44.setIcon(Cross);
+                        break;
+                    case 2:
+                        Tile44.setIcon(Diamond);
+                        break;
+                    case 3:
+                        Tile44.setIcon(Donut);
+                        break;
+                    case 4:
+                        Tile44.setIcon(Eclipse);
+                        break;
+                    case 5:
+                        Tile44.setIcon(Square);
+                        break;
+                    case 6:
+                        Tile44.setIcon(Star);
+                        break;
+                    case 7:
+                        Tile44.setIcon(X);
+                        break; 
+                }       
+            }
+            else if (ID == 20){
                 switch(type){
                     case 0:
                         Tile44.setIcon(Circle);
@@ -1083,18 +1642,38 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile12.setIcon(Blank);
         Tile13.setIcon(Blank);
         Tile14.setIcon(Blank);
+        Tile15.setIcon(Blank);
+        Tile16.setIcon(Blank);
         Tile21.setIcon(Blank);
         Tile22.setIcon(Blank);
         Tile23.setIcon(Blank);
         Tile24.setIcon(Blank);
+        Tile25.setIcon(Blank);
+        Tile26.setIcon(Blank);
         Tile31.setIcon(Blank);
         Tile32.setIcon(Blank);
         Tile33.setIcon(Blank);
         Tile34.setIcon(Blank);
+        Tile35.setIcon(Blank);
+        Tile36.setIcon(Blank);
         Tile41.setIcon(Blank);
         Tile42.setIcon(Blank);
         Tile43.setIcon(Blank);
         Tile44.setIcon(Blank);
+        Tile45.setIcon(Blank);
+        Tile46.setIcon(Blank);
+        Tile51.setIcon(Blank);
+        Tile52.setIcon(Blank);
+        Tile53.setIcon(Blank);
+        Tile54.setIcon(Blank);
+        Tile55.setIcon(Blank);
+        Tile56.setIcon(Blank);
+        Tile61.setIcon(Blank);
+        Tile62.setIcon(Blank);
+        Tile63.setIcon(Blank);
+        Tile64.setIcon(Blank);
+        Tile65.setIcon(Blank);
+        Tile66.setIcon(Blank);
     }
     
     //do the 2 buttons chosen have matching shapes?
