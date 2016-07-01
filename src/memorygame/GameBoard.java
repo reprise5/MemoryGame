@@ -330,7 +330,6 @@ public class GameBoard extends javax.swing.JFrame {
     // = = = = = = = = = = START GAME BUTTON = = = = = = = = = =
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
         System.out.println("============NEW=GAME============");
-        
         PrevID_Guess1 = 100;
         PrevID_Guess2 = 100;
         ID_Guess1 = 100;
@@ -339,6 +338,8 @@ public class GameBoard extends javax.swing.JFrame {
         count = 0;
         score = 0;
         sScore = "0";
+        responseCount = 0;
+        correctRespCount = 0;
         
         ScoreScreen.setText(sScore);
         
@@ -434,6 +435,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -443,6 +445,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -504,6 +511,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -513,6 +521,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -574,6 +587,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -583,6 +597,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -644,6 +663,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -653,6 +673,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -714,6 +739,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -723,6 +749,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -784,6 +815,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -793,6 +825,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -854,6 +891,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -863,6 +901,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -924,6 +967,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -933,6 +977,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -994,6 +1043,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1003,6 +1053,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1064,6 +1119,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1073,6 +1129,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1134,6 +1195,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1143,6 +1205,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1204,6 +1271,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1213,6 +1281,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1274,6 +1347,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1283,6 +1357,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1344,6 +1423,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1353,6 +1433,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1414,6 +1499,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1423,6 +1509,11 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
@@ -1484,6 +1575,7 @@ public class GameBoard extends javax.swing.JFrame {
                     score = score - 2;
                     sScore = Integer.toString(score);
                     ScoreScreen.setText(sScore);
+                    responseCount++;
                 }
                 else{
                     System.out.println("     *MATCH!*     ");
@@ -1493,22 +1585,53 @@ public class GameBoard extends javax.swing.JFrame {
 
                     buttonEnabledSwitch(false, ID_Guess1);
                     buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctRespCount++;
+                    responseCount++;
+                    
+                    checkEndGame();
                 }
             }
             count = 0;
         }
     }//GEN-LAST:event_Tile44ActionPerformed
 
-    //File>Quit
+    //File>Quit | Reset the board as if it had never been opened, and then close it.  doesn't quit program.
     private void QuitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitMenuItemActionPerformed
-        this.dispose();
-        //MainMenu1.setVisible(true);
+        wipeBoard();
+        PrevID_Guess1 = 100;
+        PrevID_Guess2 = 100;
+        ID_Guess1 = 100;
+        ID_Guess2 = 100;
+        match = false;
+        count = 0;
+        score = 0;
+        sScore = "0";
+        ScoreScreen.setText(sScore);
         
+        buttonEnabledSwitch(false, 0);
+        buttonEnabledSwitch(false, 1);
+        buttonEnabledSwitch(false, 2);
+        buttonEnabledSwitch(false, 3);
+        buttonEnabledSwitch(false, 4);
+        buttonEnabledSwitch(false, 5);
+        buttonEnabledSwitch(false, 6);
+        buttonEnabledSwitch(false, 7);
+        buttonEnabledSwitch(false, 8);
+        buttonEnabledSwitch(false, 9);
+        buttonEnabledSwitch(false, 10);
+        buttonEnabledSwitch(false, 11);
+        buttonEnabledSwitch(false, 12);
+        buttonEnabledSwitch(false, 13);
+        buttonEnabledSwitch(false, 14);
+        buttonEnabledSwitch(false, 15);
+        
+        this.dispose();
     }//GEN-LAST:event_QuitMenuItemActionPerformed
     
-    //Quit Button, will just close this current game screen not quit the program.
+    //Quit Button, Reset the board as if it had never been opened, and close it.  doesn't quit program.
     private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
-        this.dispose();
+        QuitMenuItemActionPerformed(evt);
     }//GEN-LAST:event_QuitButtonActionPerformed
 
     //===================================OTHER DEFINED SUBROUTINES==================================
@@ -2162,6 +2285,40 @@ public class GameBoard extends javax.swing.JFrame {
         }   
     }
     
+    //Check for a win or loss - if all buttons are pressed, make decision based on score.
+    public void checkEndGame(){
+        if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && 
+                !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() &&
+                !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() &&
+                !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled()){
+        
+            accuracy = correctRespCount / responseCount * 100;
+            accuracy = Math.round (accuracy * 10.0) / 10.0; 
+            
+            System.out.println("=====GAME OVER=====\n"
+                        + "Accuracy: " + accuracy + "%\n"
+                        + "Score: " + score);
+            
+            if (score > 0){
+                JOptionPane.showMessageDialog(rootPane,
+                "                        Congratulations!        \n"
+                + "you finished the game.  Your final score is " + score + ".\n"
+                + "You finished the game successfully with " + accuracy  + "% accuracy!", 
+                "You Win!", 
+                WIDTH, null);
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane,
+                "              Nice Try!\n"
+                + "you finished the game with " + accuracy + "% accuracy.\n"
+                + "However your score is " + score + ".\n"
+                + "You need a score greater than 0 to win.  Try again!", 
+                "You Lose!", 
+                WIDTH, null);
+            }
+        }
+    }
+    
     //form's main
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -2246,4 +2403,7 @@ public class GameBoard extends javax.swing.JFrame {
     String sScore;                              //to be sent to the label.
     int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
     int PrevID_Guess2;                          //return to blanks when a new matching has started.
+    double responseCount;                       //Keeps track of how many pairs happened. used to calculate accuracy %.
+    double correctRespCount;                    //Keeps track of CORRECT pairs that occur. used to calculate accuracy %.
+    double accuracy;
 }

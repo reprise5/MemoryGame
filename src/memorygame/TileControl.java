@@ -8,11 +8,11 @@ public class TileControl {
     //GLOBALS 
     
     //these hold the positions (ID) of each of the shapes and their pair.
-    //this ID is handed out from initShuffle4x4Tiles() randomCollection array.
+    //this ID is handed out from initShuffleTiles() randomCollection array.
     int circle1, circle2;
     int cross1, cross2;
     int diamond1, diamond2;
-    int dice1, dice2;
+    int dice1 , dice2;
     int donut1, donut2;
     int eclipse1, eclipse2;
     int eclipse3, eclipse4;
@@ -43,6 +43,7 @@ public class TileControl {
         }
         Collections.shuffle(randomCollection);
 
+        //assign each shape their locations
         circle1 = randomCollection.get(n);
         n++;
         circle2 = randomCollection.get(n);

@@ -5,7 +5,9 @@
  */
 package memorygame;
 
+import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -486,6 +488,7 @@ public class GameBoard2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //start the game
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
         System.out.println("============NEW=GAME============");
 
@@ -557,6 +560,7 @@ public class GameBoard2 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_startGameButtonActionPerformed
 
+    // Reset the board as if it had never been opened, and then close it.  doesn't quit program.
     private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
@@ -1851,6 +1855,7 @@ public class GameBoard2 extends javax.swing.JFrame {
             }             
         }   
     }
+    
     
     //===============================================================================================
     
