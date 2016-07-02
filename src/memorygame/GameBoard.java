@@ -2305,16 +2305,16 @@ public class GameBoard extends javax.swing.JFrame {
                 + "you finished the game.  Your final score is " + score + ".\n"
                 + "You finished the game successfully with " + accuracy  + "% accuracy!", 
                 "You Win!", 
-                WIDTH, null);
+                WIDTH, WIN);
             }
             else{
                 JOptionPane.showMessageDialog(rootPane,
-                "              Nice Try!\n"
+                "                               Nice Try!\n"
                 + "you finished the game with " + accuracy + "% accuracy.\n"
                 + "However your score is " + score + ".\n"
                 + "You need a score greater than 0 to win.  Try again!", 
                 "You Lose!", 
-                WIDTH, null);
+                WIDTH, LOSS);
             }
         }
     }
@@ -2394,6 +2394,8 @@ public class GameBoard extends javax.swing.JFrame {
     ImageIcon Star      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Star.png"));
     ImageIcon X         = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/X.png"));
     ImageIcon Blank     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/blankTile.png"));
+    ImageIcon WIN       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/WIN.png"));
+    ImageIcon LOSS       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/LOSS.png"));
     
     int count = 0;                              //1 for first tile flipped, 2 for second.  if 2, check match.
     int ID_Guess1 = 100, ID_Guess2 = 100;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
