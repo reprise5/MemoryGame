@@ -2302,8 +2302,8 @@ public class GameBoard extends javax.swing.JFrame {
             if (score > 0){
                 JOptionPane.showMessageDialog(rootPane,
                 "                        Congratulations!        \n"
-                + "you finished the game.  Your final score is " + score + ".\n"
-                + "You finished the game successfully with " + accuracy  + "% accuracy!", 
+                + "You finished the game successfully with " + accuracy  + "% accuracy, \n"
+                + "And a final score of " + score + "!\n", 
                 "You Win!", 
                 WIDTH, WIN);
             }
