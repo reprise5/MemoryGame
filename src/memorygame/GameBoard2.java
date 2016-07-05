@@ -5,21 +5,17 @@
  */
 package memorygame;
 
-import static java.awt.image.ImageObserver.WIDTH;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-/**
- *
+/*
  * @author reprise
  */
 public class GameBoard2 extends javax.swing.JFrame {
-
-    /**
-     * Creates new form GameBoard2
-     */
+    
+     //Creates new form GameBoard2
     public GameBoard2() {
         initComponents();
     }
@@ -102,36 +98,66 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile12.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile12.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile12.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile12ActionPerformed(evt);
+            }
+        });
 
         Tile13.setEnabled(false);
         Tile13.setFocusable(false);
         Tile13.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile13.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile13.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile13ActionPerformed(evt);
+            }
+        });
 
         Tile14.setEnabled(false);
         Tile14.setFocusable(false);
         Tile14.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile14.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile14.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile14ActionPerformed(evt);
+            }
+        });
 
         Tile15.setEnabled(false);
         Tile15.setFocusable(false);
         Tile15.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile15.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile15.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile15ActionPerformed(evt);
+            }
+        });
 
         Tile11.setEnabled(false);
         Tile11.setFocusable(false);
         Tile11.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile11.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile11.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile11ActionPerformed(evt);
+            }
+        });
 
         Tile16.setEnabled(false);
         Tile16.setFocusable(false);
         Tile16.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile16.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile16.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile16ActionPerformed(evt);
+            }
+        });
 
         Tile22.setEnabled(false);
         Tile22.setFocusable(false);
@@ -168,6 +194,11 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile21.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile21.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile21.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile21ActionPerformed(evt);
+            }
+        });
 
         Tile32.setEnabled(false);
         Tile32.setFocusable(false);
@@ -562,10 +593,528 @@ public class GameBoard2 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_startGameButtonActionPerformed
 
-    // Reset the board as if it had never been opened, and then close it.  doesn't quit program.
+    //Reset the board as if it had never been opened, and then close it.  doesn't quit program.
     private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
+
+    //Tile 1,1 | ID 0 - Press
+    private void Tile11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile11ActionPerformed
+        int ID = 0;
+        int type;
+        
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile11ActionPerformed
+    
+    //Tile 1,2 | ID 1 - Press
+    private void Tile12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile12ActionPerformed
+        int ID = 1;
+        int type;
+        
+        System.out.print("1,2 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile12ActionPerformed
+
+    //Tile 1,3 | ID 2 - Press
+    private void Tile13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile13ActionPerformed
+        int ID = 2;
+        int type;
+                
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile13ActionPerformed
+
+    //Tile 1,4 | ID 3 - Press
+    private void Tile14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile14ActionPerformed
+        int ID = 3;
+        int type;
+        
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile14ActionPerformed
+
+    //Tile 1,5 | ID 4 - Press
+    private void Tile15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile15ActionPerformed
+        int ID = 4;
+        int type;
+                
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile15ActionPerformed
+
+    //Tile 1,6 | ID 5 - Press
+    private void Tile16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile16ActionPerformed
+        int ID = 5;
+        int type;
+                
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile16ActionPerformed
+
+    //Tile 2,1 | ID 6 - Press
+    private void Tile21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile21ActionPerformed
+        int ID = 6;
+        int type;
+                
+        System.out.print("1,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        
+        if (count == 0){
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if(!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }
+    }//GEN-LAST:event_Tile21ActionPerformed
     
     //====================================OTHER DEFINED SUBROUTINES==================================
     
@@ -704,8 +1253,6 @@ public class GameBoard2 extends javax.swing.JFrame {
             case 35:
                 Tile66.setIcon(shapes.get(type));
                 break;
-                
-                
         } 
     }
     
@@ -758,6 +1305,40 @@ public class GameBoard2 extends javax.swing.JFrame {
         }
         
         return match;
+    }
+    
+    //Check for a win or loss - if all buttons are pressed, make decision based on score.
+    public void checkEndGame(){
+        if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && 
+                !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() &&
+                !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() &&
+                !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled()){
+        
+            accuracy = correctPairs / totalPairs * 100;
+            accuracy = Math.round (accuracy * 10.0) / 10.0; 
+            
+            System.out.println("=====GAME OVER=====\n"
+                        + "Accuracy: " + accuracy + "%\n"
+                        + "Score: " + score);
+            
+            if (score > 0){
+                JOptionPane.showMessageDialog(rootPane,
+                "                        Congratulations!        \n"
+                + "You finished the game successfully with " + accuracy  + "% accuracy, \n"
+                + "And a final score of " + score + "!\n", 
+                "You Win!", 
+                WIDTH, WIN);
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane,
+                "                               Nice Try!\n"
+                + "you finished the game with " + accuracy + "% accuracy.\n"
+                + "However your score is " + score + ".\n"
+                + "You need a score greater than 0 to win.  Try again!", 
+                "You Lose!", 
+                WIDTH, LOSS);
+            }
+        }
     }
     
     //Hide the shape and set icon to blank a particular button/Tile.
@@ -816,8 +1397,8 @@ public class GameBoard2 extends javax.swing.JFrame {
     
     //enable or disable a button. (enable when it's blank [again], & disable when a shape is showing.)
     public void buttonEnabledSwitch(boolean state, int ID){
+        //ENABLE BUTTON at passed ID location.
         if (state){
-            //then enable the button at the passed ID.
             switch(ID){
                 case 0:
                     Tile11.setEnabled(true);
@@ -832,49 +1413,108 @@ public class GameBoard2 extends javax.swing.JFrame {
                     Tile14.setEnabled(true);
                     break;
                 case 4:
-                    Tile21.setEnabled(true);
+                    Tile15.setEnabled(true);
                     break;
                 case 5:
-                    Tile22.setEnabled(true);
+                    Tile16.setEnabled(true);
                     break;
                 case 6:
-                    Tile23.setEnabled(true);
+                    Tile21.setEnabled(true);
                     break;
                 case 7:
-                    Tile24.setEnabled(true);
+                    Tile22.setEnabled(true);
                     break;
                 case 8:
-                    Tile31.setEnabled(true);
+                    Tile23.setEnabled(true);
                     break;
                 case 9:
-                    Tile32.setEnabled(true);
+                    Tile24.setEnabled(true);
                     break;
                 case 10:
-                    Tile33.setEnabled(true);
+                    Tile25.setEnabled(true);
                     break;
                 case 11:
-                    Tile34.setEnabled(true);
+                    Tile26.setEnabled(true);
                     break;
                 case 12:
-                    Tile41.setEnabled(true);
+                    Tile31.setEnabled(true);
                     break;
                 case 13:
-                    Tile42.setEnabled(true);
+                    Tile32.setEnabled(true);
                     break;
                 case 14:
-                    Tile43.setEnabled(true);
+                    Tile33.setEnabled(true);
                     break;
                 case 15:
+                    Tile34.setEnabled(true);
+                    break;
+                case 16:
+                    Tile35.setEnabled(true);
+                    break;
+                case 17:
+                    Tile36.setEnabled(true);
+                    break;
+                case 18:
+                    Tile41.setEnabled(true);
+                    break;
+                case 19:
+                    Tile42.setEnabled(true);
+                    break;
+                case 20:
+                    Tile43.setEnabled(true);
+                    break;
+                case 21:
                     Tile44.setEnabled(true);
-                    break;    
+                    break;
+                case 22:
+                    Tile45.setEnabled(true);
+                    break;
+                case 23:
+                    Tile46.setEnabled(true);
+                    break;
+                case 24:
+                    Tile51.setEnabled(true);
+                    break;
+                case 25:
+                    Tile52.setEnabled(true);
+                    break;
+                case 26:
+                    Tile53.setEnabled(true);
+                    break;
+                case 27:
+                    Tile54.setEnabled(true);
+                    break;
+                case 28:
+                    Tile55.setEnabled(true);
+                    break;
+                case 29:
+                    Tile56.setEnabled(true);
+                    break;
+                case 30:
+                    Tile61.setEnabled(true);
+                    break;
+                case 31:
+                    Tile62.setEnabled(true);
+                    break;
+                case 32:
+                    Tile63.setEnabled(true);
+                    break;
+                case 33:
+                    Tile64.setEnabled(true);
+                    break;
+                case 34:
+                    Tile65.setEnabled(true);
+                    break;
+                case 35:
+                    Tile66.setEnabled(true);
+                    break;
             }
         }
+        //DISABLE BUTTON at passed location.
         else{
-            //then disable the button at the passed ID.
             switch(ID){
                 case 0:
                     Tile11.setEnabled(false);
-                    
                     break;
                 case 1:
                     Tile12.setEnabled(false);
@@ -886,54 +1526,109 @@ public class GameBoard2 extends javax.swing.JFrame {
                     Tile14.setEnabled(false);
                     break;
                 case 4:
-                    Tile21.setEnabled(false);
+                    Tile15.setEnabled(false);
                     break;
                 case 5:
-                    Tile22.setEnabled(false);
+                    Tile16.setEnabled(false);
                     break;
                 case 6:
-                    Tile23.setEnabled(false);
+                    Tile21.setEnabled(false);
                     break;
                 case 7:
-                    Tile24.setEnabled(false);
+                    Tile22.setEnabled(false);
                     break;
                 case 8:
-                    Tile31.setEnabled(false);
+                    Tile23.setEnabled(false);
                     break;
                 case 9:
-                    Tile32.setEnabled(false);
+                    Tile24.setEnabled(false);
                     break;
                 case 10:
-                    Tile33.setEnabled(false);
+                    Tile25.setEnabled(false);
                     break;
                 case 11:
-                    Tile34.setEnabled(false);
+                    Tile26.setEnabled(false);
                     break;
                 case 12:
-                    Tile41.setEnabled(false);
+                    Tile31.setEnabled(false);
                     break;
                 case 13:
-                    Tile42.setEnabled(false);
+                    Tile32.setEnabled(false);
                     break;
                 case 14:
-                    Tile43.setEnabled(false);
+                    Tile33.setEnabled(false);
                     break;
                 case 15:
+                    Tile34.setEnabled(false);
+                    break;
+                case 16:
+                    Tile35.setEnabled(false);
+                    break;
+                case 17:
+                    Tile36.setEnabled(false);
+                    break;
+                case 18:
+                    Tile41.setEnabled(false);
+                    break;
+                case 19:
+                    Tile42.setEnabled(false);
+                    break;
+                case 20:
+                    Tile43.setEnabled(false);
+                    break;
+                case 21:
                     Tile44.setEnabled(false);
-                    break;    
+                    break;
+                case 22:
+                    Tile45.setEnabled(false);
+                    break;
+                case 23:
+                    Tile46.setEnabled(false);
+                    break;
+                case 24:
+                    Tile51.setEnabled(false);
+                    break;
+                case 25:
+                    Tile52.setEnabled(false);
+                    break;
+                case 26:
+                    Tile53.setEnabled(false);
+                    break;
+                case 27:
+                    Tile54.setEnabled(false);
+                    break;
+                case 28:
+                    Tile55.setEnabled(false);
+                    break;
+                case 29:
+                    Tile56.setEnabled(false);
+                    break;
+                case 30:
+                    Tile61.setEnabled(false);
+                    break;
+                case 31:
+                    Tile62.setEnabled(false);
+                    break;
+                case 32:
+                    Tile63.setEnabled(false);
+                    break;
+                case 33:
+                    Tile64.setEnabled(false);
+                    break;
+                case 34:
+                    Tile65.setEnabled(false);
+                    break;
+                case 35:
+                    Tile66.setEnabled(false);
+                    break;
             }             
         }   
     }
     
     //===============================================================================================
     
-    //
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -1026,6 +1721,8 @@ public class GameBoard2 extends javax.swing.JFrame {
     ImageIcon Tear      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Tear.png"));
     ImageIcon Triangle  = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Triangle.png"));
     ImageIcon X         = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/X.png"));
+    ImageIcon WIN       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/WIN.png"));
+    ImageIcon LOSS       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/LOSS.png"));
     
     int count = 0;                              //1 for first tile flipped, 2 for second.  if 2, check match.
     int ID_Guess1 = 100, ID_Guess2 = 100;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
@@ -1035,4 +1732,7 @@ public class GameBoard2 extends javax.swing.JFrame {
     String sScore;                              //to be sent to the label.
     int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
     int PrevID_Guess2;                          //return to blanks when a new matching has started.
+    double totalPairs;                          //Keeps track of how many pairs happened. used to calculate accuracy %.
+    double correctPairs;                        //Keeps track of CORRECT pairs that occur. used to calculate accuracy %.
+    double accuracy;                            //return to blanks when a new matching has started.
 }

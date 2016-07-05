@@ -1,4 +1,6 @@
 package memorygame;
+
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -1638,455 +1640,69 @@ public class GameBoard extends javax.swing.JFrame {
     
     // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
     public void showTileShape(int ID, int type){
-        //first need to know which button to flip (ID), then what to change it to (type).
-            if (ID == 0){
-                switch(type){
-                    case 0:
-                        Tile11.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile11.setIcon(Cross);        
-                        break;
-                    case 2:
-                        Tile11.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile11.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile11.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile11.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile11.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile11.setIcon(X);
-                        break;
-                }
-            }
-            else if (ID == 1){
-                switch(type){
-                    case 0:
-                        Tile12.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile12.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile12.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile12.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile12.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile12.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile12.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile12.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 2){
-                switch(type){
-                    case 0:
-                        Tile13.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile13.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile13.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile13.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile13.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile13.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile13.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile13.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 3){
-                switch(type){
-                    case 0:
-                        Tile14.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile14.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile14.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile14.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile14.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile14.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile14.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile14.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 4){
-                switch(type){
-                    case 0:
-                        Tile21.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile21.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile21.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile21.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile21.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile21.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile21.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile21.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 5){
-                switch(type){
-                    case 0:
-                        Tile22.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile22.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile22.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile22.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile22.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile22.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile22.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile22.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 6){
-                switch(type){
-                    case 0:
-                        Tile23.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile23.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile23.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile23.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile23.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile23.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile23.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile23.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 7){
-                switch(type){
-                    case 0:
-                        Tile24.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile24.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile24.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile24.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile24.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile24.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile24.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile24.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 8){
-                switch(type){
-                    case 0:
-                        Tile31.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile31.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile31.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile31.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile31.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile31.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile31.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile31.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 9){
-                switch(type){
-                    case 0:
-                        Tile32.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile32.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile32.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile32.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile32.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile32.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile32.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile32.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 10){
-                switch(type){
-                    case 0:
-                        Tile33.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile33.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile33.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile33.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile33.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile33.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile33.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile33.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 11){
-                switch(type){
-                    case 0:
-                        Tile34.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile34.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile34.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile34.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile34.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile34.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile34.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile34.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 12){
-                switch(type){
-                    case 0:
-                        Tile41.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile41.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile41.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile41.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile41.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile41.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile41.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile41.setIcon(X);
-                        break; 
-                }       
-            }
-             else if (ID == 13){
-                switch(type){
-                    case 0:
-                        Tile42.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile42.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile42.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile42.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile42.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile42.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile42.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile42.setIcon(X);
-                        break; 
-                }       
-            }
-             else if (ID == 14){
-                switch(type){
-                    case 0:
-                        Tile43.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile43.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile43.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile43.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile43.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile43.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile43.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile43.setIcon(X);
-                        break; 
-                }       
-            }
-            else if (ID == 15){
-                switch(type){
-                    case 0:
-                        Tile44.setIcon(Circle);
-                        break;
-                    case 1:
-                        Tile44.setIcon(Cross);
-                        break;
-                    case 2:
-                        Tile44.setIcon(Diamond);
-                        break;
-                    case 3:
-                        Tile44.setIcon(Donut);
-                        break;
-                    case 4:
-                        Tile44.setIcon(Eclipse);
-                        break;
-                    case 5:
-                        Tile44.setIcon(Square);
-                        break;
-                    case 6:
-                        Tile44.setIcon(Star);
-                        break;
-                    case 7:
-                        Tile44.setIcon(X);
-                        break; 
-                }       
-            }
+        //first define an array list filled with imageicons for tiles. their index is = to their shape code.
+        //so to read from it, just pass type to this ArrayList to get the right icon/shape.
+        ArrayList<ImageIcon> shapes = new ArrayList();
+        shapes.add(Circle);
+        shapes.add(Cross);
+        shapes.add(Diamond);
+        shapes.add(Donut);
+        shapes.add(Eclipse);
+        shapes.add(Square);
+        shapes.add(Star);
+        shapes.add(X);
+
+        //now based on the ID passed, the tile at that case will search the array using type, and set the icon to the one it matches.
+        switch(ID){
+            case 0: 
+                Tile11.setIcon(shapes.get(type));
+                break;
+            case 1:
+                Tile12.setIcon(shapes.get(type));
+                break;
+            case 2:
+                Tile13.setIcon(shapes.get(type));
+                break;
+            case 3:
+                Tile14.setIcon(shapes.get(type));
+                break;
+            case 4:
+                Tile21.setIcon(shapes.get(type));
+                break;
+            case 5:
+                Tile22.setIcon(shapes.get(type));
+                break;
+            case 6:
+                Tile23.setIcon(shapes.get(type));
+                break;
+            case 7:
+                Tile24.setIcon(shapes.get(type));
+                break;
+            case 8:
+                Tile31.setIcon(shapes.get(type));
+                break;
+            case 9:
+                Tile32.setIcon(shapes.get(type));
+                break;
+            case 10:
+                Tile33.setIcon(shapes.get(type));
+                break;
+            case 11:
+                Tile34.setIcon(shapes.get(type));
+                break;
+            case 12:
+                Tile41.setIcon(shapes.get(type));
+                break;
+            case 13:
+                Tile42.setIcon(shapes.get(type));
+                break;
+            case 14:
+                Tile43.setIcon(shapes.get(type));
+                break;
+            case 15:
+                Tile44.setIcon(shapes.get(type));
+                break;
+        }
     }
     
     //Sets the icons to all of the buttons to BlankTile.png. Doesn't reset the actual game.

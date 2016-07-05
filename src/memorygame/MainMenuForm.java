@@ -97,7 +97,7 @@ public class MainMenuForm extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ExitButtonActionPerformed
 
-    //Play the new 6x6 Tile Gamw
+    //Play the new 6x6 Tile Game
     private void Start6x6ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Start6x6ButtonActionPerformed
         mediumGame.setVisible(true);   
     }//GEN-LAST:event_Start6x6ButtonActionPerformed

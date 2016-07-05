@@ -262,6 +262,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile12ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile13">
       <Properties>
@@ -277,6 +280,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile13ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile14">
       <Properties>
@@ -292,6 +298,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile14ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile15">
       <Properties>
@@ -307,6 +316,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile15ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile11">
       <Properties>
@@ -322,6 +334,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile11ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile16">
       <Properties>
@@ -337,6 +352,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile16ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile22">
       <Properties>
@@ -427,6 +445,9 @@
           <Dimension value="[30, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tile21ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Tile32">
       <Properties>
