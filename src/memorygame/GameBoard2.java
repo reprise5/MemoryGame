@@ -225,30 +225,55 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile32.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile32.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile32.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile32ActionPerformed(evt);
+            }
+        });
 
         Tile36.setEnabled(false);
         Tile36.setFocusable(false);
         Tile36.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile36.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile36.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile36ActionPerformed(evt);
+            }
+        });
 
         Tile33.setEnabled(false);
         Tile33.setFocusable(false);
         Tile33.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile33.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile33.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile33ActionPerformed(evt);
+            }
+        });
 
         Tile34.setEnabled(false);
         Tile34.setFocusable(false);
         Tile34.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile34.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile34.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile34ActionPerformed(evt);
+            }
+        });
 
         Tile35.setEnabled(false);
         Tile35.setFocusable(false);
         Tile35.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile35.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile35.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile35ActionPerformed(evt);
+            }
+        });
 
         Tile31.setEnabled(false);
         Tile31.setFocusable(false);
@@ -266,108 +291,198 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile42.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile42.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile42.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile42ActionPerformed(evt);
+            }
+        });
 
         Tile46.setEnabled(false);
         Tile46.setFocusable(false);
         Tile46.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile46.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile46.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile46ActionPerformed(evt);
+            }
+        });
 
         Tile43.setEnabled(false);
         Tile43.setFocusable(false);
         Tile43.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile43.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile43.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile43ActionPerformed(evt);
+            }
+        });
 
         Tile44.setEnabled(false);
         Tile44.setFocusable(false);
         Tile44.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile44.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile44.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile44ActionPerformed(evt);
+            }
+        });
 
         Tile45.setEnabled(false);
         Tile45.setFocusable(false);
         Tile45.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile45.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile45.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile45ActionPerformed(evt);
+            }
+        });
 
         Tile41.setEnabled(false);
         Tile41.setFocusable(false);
         Tile41.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile41.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile41.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile41ActionPerformed(evt);
+            }
+        });
 
         Tile52.setEnabled(false);
         Tile52.setFocusable(false);
         Tile52.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile52.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile52.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile52ActionPerformed(evt);
+            }
+        });
 
         Tile56.setEnabled(false);
         Tile56.setFocusable(false);
         Tile56.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile56.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile56.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile56ActionPerformed(evt);
+            }
+        });
 
         Tile53.setEnabled(false);
         Tile53.setFocusable(false);
         Tile53.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile53.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile53.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile53ActionPerformed(evt);
+            }
+        });
 
         Tile54.setEnabled(false);
         Tile54.setFocusable(false);
         Tile54.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile54.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile54.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile54ActionPerformed(evt);
+            }
+        });
 
         Tile55.setEnabled(false);
         Tile55.setFocusable(false);
         Tile55.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile55.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile55.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile55ActionPerformed(evt);
+            }
+        });
 
         Tile51.setEnabled(false);
         Tile51.setFocusable(false);
         Tile51.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile51.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile51.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile51ActionPerformed(evt);
+            }
+        });
 
         Tile62.setEnabled(false);
         Tile62.setFocusable(false);
         Tile62.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile62.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile62.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile62ActionPerformed(evt);
+            }
+        });
 
         Tile66.setEnabled(false);
         Tile66.setFocusable(false);
         Tile66.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile66.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile66.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile66.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile66ActionPerformed(evt);
+            }
+        });
 
         Tile63.setEnabled(false);
         Tile63.setFocusable(false);
         Tile63.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile63.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile63.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile63ActionPerformed(evt);
+            }
+        });
 
         Tile64.setEnabled(false);
         Tile64.setFocusable(false);
         Tile64.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile64.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile64.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile64ActionPerformed(evt);
+            }
+        });
 
         Tile65.setEnabled(false);
         Tile65.setFocusable(false);
         Tile65.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile65.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile65.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile65.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile65ActionPerformed(evt);
+            }
+        });
 
         Tile61.setEnabled(false);
         Tile61.setFocusable(false);
         Tile61.setMaximumSize(new java.awt.Dimension(32, 10));
         Tile61.setMinimumSize(new java.awt.Dimension(32, 10));
         Tile61.setPreferredSize(new java.awt.Dimension(30, 10));
+        Tile61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tile61ActionPerformed(evt);
+            }
+        });
 
         QuitButton.setText("QUIT");
         QuitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -558,6 +673,9 @@ public class GameBoard2 extends javax.swing.JFrame {
         count = 0;
         score = 0;
         sScore = "0";
+        accuracy = 0;
+        correctPairs = 0;
+        totalPairs = 0;
 
         ScoreScreen.setText(sScore);
 
@@ -600,7 +718,7 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile66.setEnabled(true);
         
 
-        //Set the icons to be Blank.  (TEMPORARY)
+        //Set the icons to be Blank.
         wipeBoard();
 
         //generate random #'s and assign them to shapes as IDs.
@@ -618,8 +736,59 @@ public class GameBoard2 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_startGameButtonActionPerformed
 
-    //Reset the board as if it had never been opened, and then close it.  doesn't quit program.
+    //desc="Reset the board as if it had never been opened, and then close it.  doesn't quit program."
     private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
+        System.out.println("========================\n"
+                         + "*** 6 x 6  C L O S E ***\n"
+                         + "========================");
+        wipeBoard();
+        PrevID_Guess1 = 100;
+        PrevID_Guess2 = 100;
+        ID_Guess1 = 100;
+        ID_Guess2 = 100;
+        match = false;
+        count = 0;
+        score = 0;
+        sScore = "0";
+        ScoreScreen.setText(sScore);
+        
+        buttonEnabledSwitch(false, 0);
+        buttonEnabledSwitch(false, 1);
+        buttonEnabledSwitch(false, 2);
+        buttonEnabledSwitch(false, 3);
+        buttonEnabledSwitch(false, 4);
+        buttonEnabledSwitch(false, 5);
+        buttonEnabledSwitch(false, 6);
+        buttonEnabledSwitch(false, 7);
+        buttonEnabledSwitch(false, 8);
+        buttonEnabledSwitch(false, 9);
+        buttonEnabledSwitch(false, 10);
+        buttonEnabledSwitch(false, 11);
+        buttonEnabledSwitch(false, 12);
+        buttonEnabledSwitch(false, 13);
+        buttonEnabledSwitch(false, 14);
+        buttonEnabledSwitch(false, 15);
+        buttonEnabledSwitch(false, 16);
+        buttonEnabledSwitch(false, 17);
+        buttonEnabledSwitch(false, 18);
+        buttonEnabledSwitch(false, 19);
+        buttonEnabledSwitch(false, 20);
+        buttonEnabledSwitch(false, 21);
+        buttonEnabledSwitch(false, 22);
+        buttonEnabledSwitch(false, 23);
+        buttonEnabledSwitch(false, 24);
+        buttonEnabledSwitch(false, 25);
+        buttonEnabledSwitch(false, 26);
+        buttonEnabledSwitch(false, 27);
+        buttonEnabledSwitch(false, 28);
+        buttonEnabledSwitch(false, 29);
+        buttonEnabledSwitch(false, 30);
+        buttonEnabledSwitch(false, 31);
+        buttonEnabledSwitch(false, 32);
+        buttonEnabledSwitch(false, 33);
+        buttonEnabledSwitch(false, 34);
+        buttonEnabledSwitch(false, 35);
+        
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
 
@@ -743,15 +912,245 @@ public class GameBoard2 extends javax.swing.JFrame {
         buttonPress(ID, type);
     }//GEN-LAST:event_Tile26ActionPerformed
 
-    //Tile 2,7 | ID 12 - Press
+    //Tile 3,1 | ID 12 - Press
     private void Tile31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile31ActionPerformed
         int ID = 12;
         int type;
                 
-        System.out.print("2,6 -- ");
+        System.out.print("3,1 -- ");
         type = tileControl.get6x6TileType(ID);
         buttonPress(ID, type);
     }//GEN-LAST:event_Tile31ActionPerformed
+
+    //Tile 3,2 | ID 13 - Press
+    private void Tile32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile32ActionPerformed
+        int ID = 13;
+        int type;
+                
+        System.out.print("3,2 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile32ActionPerformed
+
+    //Tile 3,3 | ID 14 - Press
+    private void Tile33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile33ActionPerformed
+        int ID = 14;
+        int type;
+                
+        System.out.print("3,3 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile33ActionPerformed
+
+    //Tile 3,4 | ID 15 - Press
+    private void Tile34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile34ActionPerformed
+        int ID = 15;
+        int type;
+                
+        System.out.print("3,4 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile34ActionPerformed
+
+    //Tile 3,5 | ID 16 - Press
+    private void Tile35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile35ActionPerformed
+        int ID = 16;
+        int type;
+                
+        System.out.print("3,5 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile35ActionPerformed
+
+    //Tile 3,6 | ID 17 - Press
+    private void Tile36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile36ActionPerformed
+        int ID = 17;
+        int type;
+                
+        System.out.print("3,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile36ActionPerformed
+
+    //Tile 4,1 | ID 18 - Press
+    private void Tile41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile41ActionPerformed
+        int ID = 18;
+        int type;
+                
+        System.out.print("4,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile41ActionPerformed
+
+    //Tile 4,2 | ID 19 - Press
+    private void Tile42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile42ActionPerformed
+        int ID = 19;
+        int type;
+                
+        System.out.print("4,2 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile42ActionPerformed
+
+    //Tile 4,3 | ID 20 - Press
+    private void Tile43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile43ActionPerformed
+        int ID = 20;
+        int type;
+                
+        System.out.print("4,3 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile43ActionPerformed
+
+    //Tile 4,4 | ID 21 - Press
+    private void Tile44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile44ActionPerformed
+        int ID = 21;
+        int type;
+                
+        System.out.print("4,4 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile44ActionPerformed
+
+    //Tile 4,5 | ID 22 - Press
+    private void Tile45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile45ActionPerformed
+        int ID = 22;
+        int type;
+                
+        System.out.print("4,5 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile45ActionPerformed
+
+    //Tile 4,6 | ID 23 - Press
+    private void Tile46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile46ActionPerformed
+        int ID = 23;
+        int type;
+                
+        System.out.print("4,6 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type); 
+    }//GEN-LAST:event_Tile46ActionPerformed
+    
+    //Tile 5,1 | ID 24 - Press
+    private void Tile51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile51ActionPerformed
+        int ID = 24;
+        int type;
+                
+        System.out.print("5,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile51ActionPerformed
+
+    //Tile 5,2 | ID 25 - Press
+    private void Tile52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile52ActionPerformed
+        int ID = 25;
+        int type;
+                
+        System.out.print("5,2 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile52ActionPerformed
+
+    //Tile 5,3 | ID 26 - Press
+    private void Tile53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile53ActionPerformed
+        int ID = 26;
+        int type;
+                
+        System.out.print("5,3 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile53ActionPerformed
+
+    //Tile 5,4 | ID 27 - Press
+    private void Tile54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile54ActionPerformed
+        int ID = 27;
+        int type;
+                
+        System.out.print("5,4 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile54ActionPerformed
+
+    //Tile 5,5 | ID 28 - Press
+    private void Tile55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile55ActionPerformed
+        int ID = 28;
+        int type;
+                
+        System.out.print("5,5 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile55ActionPerformed
+
+    //TIle 5,6 | ID 29 - Press
+    private void Tile56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile56ActionPerformed
+        int ID = 29;
+        int type;
+                
+        System.out.print("5,6 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile56ActionPerformed
+
+    //Tile 6,1 | ID 30 - Press
+    private void Tile61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile61ActionPerformed
+        int ID = 30;
+        int type;
+                
+        System.out.print("6,1 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile61ActionPerformed
+
+    //Tile 6,2 | ID 31 - Press
+    private void Tile62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile62ActionPerformed
+        int ID = 31;
+        int type;
+                
+        System.out.print("6,2 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile62ActionPerformed
+
+    //Tile 6,3 | ID 32 - Press
+    private void Tile63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile63ActionPerformed
+        int ID = 32;
+        int type;
+                
+        System.out.print("6,3 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile63ActionPerformed
+
+    //Tile 6,4 | ID 33 - Press
+    private void Tile64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile64ActionPerformed
+        int ID = 33;
+        int type;
+                
+        System.out.print("6,4 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile64ActionPerformed
+
+    //Tile 6,5 | ID 34 - Press
+    private void Tile65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile65ActionPerformed
+        int ID = 34;
+        int type;
+                
+        System.out.print("6,5 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile65ActionPerformed
+
+    //Tile 6,6 | ID 35 - Press
+    private void Tile66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tile66ActionPerformed
+        int ID = 35;
+        int type;
+                
+        System.out.print("6,6 -- ");
+        type = tileControl.get6x6TileType(ID);
+        buttonPress(ID, type);
+    }//GEN-LAST:event_Tile66ActionPerformed
     
     //====================================OTHER DEFINED SUBROUTINES==================================
     
@@ -946,17 +1345,20 @@ public class GameBoard2 extends javax.swing.JFrame {
     
     //Check for a win or loss - if all buttons are pressed, make decision based on score.
     private void checkEndGame(){
-        if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && 
-                !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() &&
-                !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() &&
-                !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled()){
+        if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && !Tile15.isEnabled() && !Tile16.isEnabled() && 
+                !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() && !Tile25.isEnabled() && !Tile26.isEnabled() &&
+                !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() && !Tile35.isEnabled() && !Tile36.isEnabled() &&
+                !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled() && !Tile45.isEnabled() && !Tile46.isEnabled() &&
+                !Tile51.isEnabled() && !Tile52.isEnabled() && !Tile53.isEnabled() && !Tile54.isEnabled() && !Tile55.isEnabled() && !Tile56.isEnabled() &&
+                !Tile61.isEnabled() && !Tile62.isEnabled() && !Tile63.isEnabled() && !Tile64.isEnabled() && !Tile65.isEnabled() && !Tile66.isEnabled()){
         
             accuracy = correctPairs / totalPairs * 100;
             accuracy = Math.round (accuracy * 10.0) / 10.0; 
             
-            System.out.println("=====GAME OVER=====\n"
-                        + "Accuracy: " + accuracy + "%\n"
-                        + "Score: " + score);
+            System.out.println("============GAME=OVER===========\n"
+                + "Total Pairs: " + totalPairs + " Correct Pairs: " + correctPairs + "\n"
+                + "Accuracy: " + accuracy + "%\n"
+                + "Score: " + score);
             
             if (score > 0){
                 JOptionPane.showMessageDialog(rootPane,
@@ -1023,70 +1425,70 @@ public class GameBoard2 extends javax.swing.JFrame {
             case 13:
                 Tile32.setIcon(Blank);
                 break;
-            case 15:
+            case 14:
                 Tile33.setIcon(Blank);
                 break;
-            case 16:
+            case 15:
                 Tile34.setIcon(Blank);
                 break;
-            case 17:
+            case 16:
                 Tile35.setIcon(Blank);
                 break;
-            case 18:
+            case 17:
                 Tile36.setIcon(Blank);
                 break;
-            case 19:
+            case 18:
                 Tile41.setIcon(Blank);
                 break;
-            case 20:
+            case 19:
                 Tile42.setIcon(Blank);
                 break;
-            case 21:
+            case 20:
                 Tile43.setIcon(Blank);
                 break;
-            case 22:
+            case 21:
                 Tile44.setIcon(Blank);
                 break;
-            case 23:
+            case 22:
                 Tile45.setIcon(Blank);
                 break;
-            case 24:
+            case 23:
                 Tile46.setIcon(Blank);
                 break;
-            case 25:
+            case 24:
                 Tile51.setIcon(Blank);
                 break;
-            case 26:
+            case 25:
                 Tile52.setIcon(Blank);
                 break;
-            case 27:
+            case 26:
                 Tile53.setIcon(Blank);
                 break;
-            case 28:
+            case 27:
                 Tile54.setIcon(Blank);
                 break;
-            case 29:
+            case 28:
                 Tile55.setIcon(Blank);
                 break;
-            case 30:
+            case 29:
                 Tile56.setIcon(Blank);
                 break;
-            case 31:
+            case 30:
                 Tile61.setIcon(Blank);
                 break;
-            case 32:
+            case 31:
                 Tile62.setIcon(Blank);
                 break;
-            case 33:
+            case 32:
                 Tile63.setIcon(Blank);
                 break;
-            case 34:
+            case 33:
                 Tile64.setIcon(Blank);
                 break;
-            case 35:
+            case 34:
                 Tile65.setIcon(Blank);
                 break;
-            case 36:
+            case 35:
                 Tile66.setIcon(Blank);
                 break;  
         }
@@ -1207,8 +1609,8 @@ public class GameBoard2 extends javax.swing.JFrame {
         }  
     }
     
+    //every tile that is pressed on the board uses this in order to make decisions in the game.
     private void buttonPress(int ID, int type){
-        
         if (count == 0){
             showTileShape(ID, type);
             ID_Guess1 = ID;
@@ -1226,6 +1628,7 @@ public class GameBoard2 extends javax.swing.JFrame {
             showTileShape(ID, type);
             ID_Guess2 = ID;
             type_Guess2 = type;
+            System.out.println("GUESS 2 ** Location1: " + ID + ", Shape_Code: " + type);
             PrevID_Guess1 = ID_Guess1;
             PrevID_Guess2 = ID_Guess2;
             
@@ -1238,11 +1641,12 @@ public class GameBoard2 extends javax.swing.JFrame {
                     "Invalid Move", WIDTH, null
                 );
                 hideSelectedTile(ID_Guess1);
+                buttonEnabledSwitch(true,ID_Guess1);
                 ID_Guess1 = 100;
                 ID_Guess2 = 100;
                 PrevID_Guess1 = 100;
                 PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
+                
             }
             else {
                 match = testMatch(type_Guess1, type_Guess2);

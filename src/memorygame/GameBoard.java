@@ -46,6 +46,7 @@ public class GameBoard extends javax.swing.JFrame {
         QuitMenuItem = new javax.swing.JMenuItem();
         GameMenu = new javax.swing.JMenu();
         resetBoardMenuItem = new javax.swing.JMenuItem();
+        save4x4Score = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("4x4 Memory Game");
@@ -228,7 +229,21 @@ public class GameBoard extends javax.swing.JFrame {
         GameMenu.setText("Game");
 
         resetBoardMenuItem.setText("Reset Board");
+        resetBoardMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetBoardMenuItemActionPerformed(evt);
+            }
+        });
         GameMenu.add(resetBoardMenuItem);
+
+        save4x4Score.setText("Save Score...");
+        save4x4Score.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        save4x4Score.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                save4x4ScoreActionPerformed(evt);
+            }
+        });
+        GameMenu.add(save4x4Score);
 
         jMenuBar1.add(GameMenu);
 
@@ -340,8 +355,9 @@ public class GameBoard extends javax.swing.JFrame {
         count = 0;
         score = 0;
         sScore = "0";
-        responseCount = 0;
-        correctRespCount = 0;
+        accuracy = 0;
+        totalPairs = 0;
+        correctPairs = 0;
         
         ScoreScreen.setText(sScore);
         
@@ -363,7 +379,7 @@ public class GameBoard extends javax.swing.JFrame {
         Tile43.setEnabled(true);
         Tile44.setEnabled(true);
         
-        //Set the icons to be Blank.  (TEMPORARY)
+        //Set the icons to be Blank.
         wipeBoard();
         
         //generate random #'s and assign them to shapes as IDs.
@@ -389,73 +405,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("1,1 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile11ActionPerformed
 
     //Tile 1,2 | ID 1 - Press
@@ -465,73 +415,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("1,2 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile12ActionPerformed
 
     //Tile 1,3 | ID 2 - Press
@@ -541,73 +425,7 @@ public class GameBoard extends javax.swing.JFrame {
          
         System.out.print("1,3 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile13ActionPerformed
 
     //Tile 1,4 | ID 3 - Press
@@ -617,73 +435,7 @@ public class GameBoard extends javax.swing.JFrame {
          
         System.out.print("1,4 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile14ActionPerformed
 
     //Tile 2,1 | ID 4 - Press
@@ -693,73 +445,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("2,1 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile21ActionPerformed
 
     //Tile 2,2 | ID 5 - Press
@@ -769,73 +455,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("2,2 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile22ActionPerformed
 
     //Tile 2,3 | ID 6 - Press
@@ -845,73 +465,7 @@ public class GameBoard extends javax.swing.JFrame {
        
         System.out.print("2,3 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile23ActionPerformed
 
     //Tile 2,4 | ID 7 - Press
@@ -921,73 +475,7 @@ public class GameBoard extends javax.swing.JFrame {
              
         System.out.print("2,4 -- ");
         type = tileControl.get4x4TileType(ID);
-
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile24ActionPerformed
 
     //Tile 3,1 | ID 8 - Press
@@ -997,73 +485,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,1 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile31ActionPerformed
 
     //Tile 3,2 | ID 9 - Press
@@ -1073,73 +495,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,2 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile32ActionPerformed
 
     //Tile 3,3 | ID 10 - Press
@@ -1149,73 +505,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,3 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile33ActionPerformed
 
     //Tile 3,4 | ID 11 - Press
@@ -1225,73 +515,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("3,4 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile34ActionPerformed
 
     //Tile 4,1 | ID 12 - Press
@@ -1301,73 +525,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,1 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile41ActionPerformed
 
     //Tile 4,2 | ID 13 - Press
@@ -1377,73 +535,7 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,2 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile42ActionPerformed
 
     //Tile 4,3 | ID 14 - Press
@@ -1453,73 +545,7 @@ public class GameBoard extends javax.swing.JFrame {
           
         System.out.print("4,3 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile43ActionPerformed
 
     //Tile 4,4 | ID 15 - Press
@@ -1529,77 +555,33 @@ public class GameBoard extends javax.swing.JFrame {
         
         System.out.print("4,4 -- ");
         type = tileControl.get4x4TileType(ID);
-        
-        if (count == 0){
-            System.out.println("(0)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess1 = ID;
-            type_Guess1 = type;
-            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
-            count++;
-            
-            //supposed to clear the 2 wrong tiles from the time before
-            if (!match){
-                hideSelectedTile(PrevID_Guess1);
-                hideSelectedTile(PrevID_Guess2);
-            }
-        }
-        else if (count == 1){
-            System.out.println("(1)COUNT: " + count);
-            showTileShape(ID, type);
-            ID_Guess2 = ID;
-            type_Guess2 = type;
-            PrevID_Guess1 = ID_Guess1;
-            PrevID_Guess2 = ID_Guess2;
-            
-            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
-            
-            //before matching test if the same tile was pressed twice.  that's cheating.
-            if (ID_Guess1 == ID_Guess2){
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "You cannot pick the same tile twice.\n" + 
-                    "That's considered cheating. Pick 2 distinct tiles.", 
-                    "Invalid Move", WIDTH, null
-                );
-                hideSelectedTile(ID_Guess1);
-                ID_Guess1 = 100;
-                ID_Guess2 = 100;
-                PrevID_Guess1 = 100;
-                PrevID_Guess2 = 100;
-                buttonEnabledSwitch(true,ID_Guess1);
-            }
-            else {
-                match = testMatch(type_Guess1, type_Guess2);
-
-                if(!match){
-                    System.out.println("     *No Match.*     ");
-                    score = score - 2;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-                    responseCount++;
-                }
-                else{
-                    System.out.println("     *MATCH!*     ");
-                    score = score + 5;
-                    sScore = Integer.toString(score);
-                    ScoreScreen.setText(sScore);
-
-                    buttonEnabledSwitch(false, ID_Guess1);
-                    buttonEnabledSwitch(false, ID_Guess2);
-                    
-                    correctRespCount++;
-                    responseCount++;
-                    
-                    checkEndGame();
-                }
-            }
-            count = 0;
-        }
+        buttonPress(ID, type);
     }//GEN-LAST:event_Tile44ActionPerformed
 
     //File>Quit | Reset the board as if it had never been opened, and then close it.  doesn't quit program.
     private void QuitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitMenuItemActionPerformed
+        System.out.println("========================\n"
+                 + "*** 4 x 4  C L O S E ***\n"
+                 + "========================");
+        resetBoardMenuItemActionPerformed(evt);
+        this.dispose();
+    }//GEN-LAST:event_QuitMenuItemActionPerformed
+    
+    //Quit Button, Reset the board as if it had never been opened, and close it.  doesn't quit program.
+    private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
+        QuitMenuItemActionPerformed(evt);
+    }//GEN-LAST:event_QuitButtonActionPerformed
+
+    //Saves score to text file.
+    private void save4x4ScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save4x4ScoreActionPerformed
+       
+        
+        
+        
+    }//GEN-LAST:event_save4x4ScoreActionPerformed
+
+    //resets the whole game board to a fresh start as if it had never been opened.
+    private void resetBoardMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBoardMenuItemActionPerformed
         wipeBoard();
         PrevID_Guess1 = 100;
         PrevID_Guess2 = 100;
@@ -1610,6 +592,9 @@ public class GameBoard extends javax.swing.JFrame {
         score = 0;
         sScore = "0";
         ScoreScreen.setText(sScore);
+        accuracy = 0;
+        correctPairs = 0;
+        totalPairs = 0;
         
         buttonEnabledSwitch(false, 0);
         buttonEnabledSwitch(false, 1);
@@ -1627,19 +612,12 @@ public class GameBoard extends javax.swing.JFrame {
         buttonEnabledSwitch(false, 13);
         buttonEnabledSwitch(false, 14);
         buttonEnabledSwitch(false, 15);
-        
-        this.dispose();
-    }//GEN-LAST:event_QuitMenuItemActionPerformed
-    
-    //Quit Button, Reset the board as if it had never been opened, and close it.  doesn't quit program.
-    private void QuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitButtonActionPerformed
-        QuitMenuItemActionPerformed(evt);
-    }//GEN-LAST:event_QuitButtonActionPerformed
+    }//GEN-LAST:event_resetBoardMenuItemActionPerformed
 
     //===================================OTHER DEFINED SUBROUTINES==================================
     
     // will display an icon on the button based on the shape_code that the button asks for prior to calling this sub.
-    public void showTileShape(int ID, int type){
+    private void showTileShape(int ID, int type){
         //first define an array list filled with imageicons for tiles. their index is = to their shape code.
         //so to read from it, just pass type to this ArrayList to get the right icon/shape.
         ArrayList<ImageIcon> shapes = new ArrayList();
@@ -1706,7 +684,7 @@ public class GameBoard extends javax.swing.JFrame {
     }
     
     //Sets the icons to all of the buttons to BlankTile.png. Doesn't reset the actual game.
-    public void wipeBoard(){
+    private void wipeBoard(){
         Tile11.setIcon(Blank);
         Tile12.setIcon(Blank);
         Tile13.setIcon(Blank);
@@ -1726,7 +704,7 @@ public class GameBoard extends javax.swing.JFrame {
     }
     
     //do the 2 buttons chosen have matching shapes?
-    public boolean testMatch(int type1, int type2){
+    private boolean testMatch(int type1, int type2){
         boolean match = false;
         
         if (type1 == type2){
@@ -1737,7 +715,7 @@ public class GameBoard extends javax.swing.JFrame {
     }
     
     //Hide the shape and set icon to blank a particular button/Tile.
-    public void hideSelectedTile(int ID){
+    private void hideSelectedTile(int ID){
         switch(ID){
             case 0:
                 Tile11.setIcon(Blank);
@@ -1791,127 +769,70 @@ public class GameBoard extends javax.swing.JFrame {
     }
     
     //enable or disable a button. (enable when it's blank [again], & disable when a shape is showing.)
-    public void buttonEnabledSwitch(boolean state, int ID){
-        if (state){
-            //then enable the button at the passed ID.
-            switch(ID){
-                case 0:
-                    Tile11.setEnabled(true);
-                    break;
-                case 1:
-                    Tile12.setEnabled(true);
-                    break;
-                case 2:
-                    Tile13.setEnabled(true);
-                    break;
-                case 3:
-                    Tile14.setEnabled(true);
-                    break;
-                case 4:
-                    Tile21.setEnabled(true);
-                    break;
-                case 5:
-                    Tile22.setEnabled(true);
-                    break;
-                case 6:
-                    Tile23.setEnabled(true);
-                    break;
-                case 7:
-                    Tile24.setEnabled(true);
-                    break;
-                case 8:
-                    Tile31.setEnabled(true);
-                    break;
-                case 9:
-                    Tile32.setEnabled(true);
-                    break;
-                case 10:
-                    Tile33.setEnabled(true);
-                    break;
-                case 11:
-                    Tile34.setEnabled(true);
-                    break;
-                case 12:
-                    Tile41.setEnabled(true);
-                    break;
-                case 13:
-                    Tile42.setEnabled(true);
-                    break;
-                case 14:
-                    Tile43.setEnabled(true);
-                    break;
-                case 15:
-                    Tile44.setEnabled(true);
-                    break;    
-            }
-        }
-        else{
-            //then disable the button at the passed ID.
-            switch(ID){
-                case 0:
-                    Tile11.setEnabled(false);
-                    
-                    break;
-                case 1:
-                    Tile12.setEnabled(false);
-                    break;
-                case 2:
-                    Tile13.setEnabled(false);
-                    break;
-                case 3:
-                    Tile14.setEnabled(false);
-                    break;
-                case 4:
-                    Tile21.setEnabled(false);
-                    break;
-                case 5:
-                    Tile22.setEnabled(false);
-                    break;
-                case 6:
-                    Tile23.setEnabled(false);
-                    break;
-                case 7:
-                    Tile24.setEnabled(false);
-                    break;
-                case 8:
-                    Tile31.setEnabled(false);
-                    break;
-                case 9:
-                    Tile32.setEnabled(false);
-                    break;
-                case 10:
-                    Tile33.setEnabled(false);
-                    break;
-                case 11:
-                    Tile34.setEnabled(false);
-                    break;
-                case 12:
-                    Tile41.setEnabled(false);
-                    break;
-                case 13:
-                    Tile42.setEnabled(false);
-                    break;
-                case 14:
-                    Tile43.setEnabled(false);
-                    break;
-                case 15:
-                    Tile44.setEnabled(false);
-                    break;    
-            }             
-        }   
+    private void buttonEnabledSwitch(boolean state, int ID){
+        switch(ID){
+            case 0:
+                Tile11.setEnabled(state);
+                break;
+            case 1:
+                Tile12.setEnabled(state);
+                break;
+            case 2:
+                Tile13.setEnabled(state);
+                break;
+            case 3:
+                Tile14.setEnabled(state);
+                break;
+            case 4:
+                Tile21.setEnabled(state);
+                break;
+            case 5:
+                Tile22.setEnabled(state);
+                break;
+            case 6:
+                Tile23.setEnabled(state);
+                break;
+            case 7:
+                Tile24.setEnabled(state);
+                break;
+            case 8:
+                Tile31.setEnabled(state);
+                break;
+            case 9:
+                Tile32.setEnabled(state);
+                break;
+            case 10:
+                Tile33.setEnabled(state);
+                break;
+            case 11:
+                Tile34.setEnabled(state);
+                break;
+            case 12:
+                Tile41.setEnabled(state);
+                break;
+            case 13:
+                Tile42.setEnabled(state);
+                break;
+            case 14:
+                Tile43.setEnabled(state);
+                break;
+            case 15:
+                Tile44.setEnabled(state);
+                break;    
+        }                
     }
     
     //Check for a win or loss - if all buttons are pressed, make decision based on score.
-    public void checkEndGame(){
+    private void checkEndGame(){
         if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && 
                 !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() &&
                 !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() &&
                 !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled()){
         
-            accuracy = correctRespCount / responseCount * 100;
+            accuracy = correctPairs / totalPairs * 100;
             accuracy = Math.round (accuracy * 10.0) / 10.0; 
-            
-            System.out.println("=====GAME OVER=====\n"
+            System.out.println("============GAME=OVER===========\n"
+                        + "Total Pairs: " + totalPairs + " Correct Pairs: " + correctPairs + "\n"
                         + "Accuracy: " + accuracy + "%\n"
                         + "Score: " + score);
             
@@ -1935,6 +856,75 @@ public class GameBoard extends javax.swing.JFrame {
         }
     }
     
+    //every tile that is pressed on the board uses this in order to make decisions in the game.
+    private void buttonPress(int ID, int type){
+        if (count == 0){
+            System.out.println("(0)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess1 = ID;
+            type_Guess1 = type;
+            System.out.println("GUESS 1 ** Location1: " + ID + ", Shape_Code: " + type);
+            count++;
+            
+            //supposed to clear the 2 wrong tiles from the time before
+            if (!match){
+                hideSelectedTile(PrevID_Guess1);
+                hideSelectedTile(PrevID_Guess2);
+            }
+        }
+        else if (count == 1){
+            System.out.println("(1)COUNT: " + count);
+            showTileShape(ID, type);
+            ID_Guess2 = ID;
+            type_Guess2 = type;
+            PrevID_Guess1 = ID_Guess1;
+            PrevID_Guess2 = ID_Guess2;
+            
+            System.out.println("GUESS 2 ** Location2: " + ID + ", Shape_Code: " + type);
+            
+            //before matching test if the same tile was pressed twice.  that's cheating.
+            if (ID_Guess1 == ID_Guess2){
+                JOptionPane.showMessageDialog(
+                    rootPane,
+                    "You cannot pick the same tile twice.\n" + 
+                    "That's considered cheating. Pick 2 distinct tiles.", 
+                    "Invalid Move", WIDTH, null
+                );
+                hideSelectedTile(ID_Guess1);
+                ID_Guess1 = 100;
+                ID_Guess2 = 100;
+                PrevID_Guess1 = 100;
+                PrevID_Guess2 = 100;
+                buttonEnabledSwitch(true,ID_Guess1);
+            }
+            else {
+                match = testMatch(type_Guess1, type_Guess2);
+
+                if (!match){
+                    System.out.println("     *No Match.*     ");
+                    score = score - 2;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+                    totalPairs++;
+                }
+                else{
+                    System.out.println("     *MATCH!*     ");
+                    score = score + 5;
+                    sScore = Integer.toString(score);
+                    ScoreScreen.setText(sScore);
+
+                    buttonEnabledSwitch(false, ID_Guess1);
+                    buttonEnabledSwitch(false, ID_Guess2);
+                    
+                    correctPairs++;
+                    totalPairs++;
+                    
+                    checkEndGame();
+                }
+            }
+            count = 0;
+        }  
+    }
     //form's main
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1994,13 +984,13 @@ public class GameBoard extends javax.swing.JFrame {
     private javax.swing.JButton Tile44;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem resetBoardMenuItem;
+    private javax.swing.JMenuItem save4x4Score;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
 
     //GLOBALS
     TileControl tileControl = new TileControl();
-    //MainMenuForm MainMenu1 = new MainMenuForm();
-    
+   
     ImageIcon Circle    = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Circle.png"));
     ImageIcon Cross     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Cross.png"));
     ImageIcon Diamond   = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/Diamond.png"));
@@ -2011,7 +1001,7 @@ public class GameBoard extends javax.swing.JFrame {
     ImageIcon X         = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/X.png"));
     ImageIcon Blank     = new javax.swing.ImageIcon(getClass().getResource("/memorygame/MGshapes/blankTile.png"));
     ImageIcon WIN       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/WIN.png"));
-    ImageIcon LOSS       = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/LOSS.png"));
+    ImageIcon LOSS      = new javax.swing.ImageIcon(getClass().getResource("/memorygame/win-loss/LOSS.png"));
     
     int count = 0;                              //1 for first tile flipped, 2 for second.  if 2, check match.
     int ID_Guess1 = 100, ID_Guess2 = 100;       //the locations of the 2 tiles the user guessed.  if !match, remove icons at these 2 locations.
@@ -2021,7 +1011,7 @@ public class GameBoard extends javax.swing.JFrame {
     String sScore;                              //to be sent to the label.
     int PrevID_Guess1;                          //these 2 are used to store the 2 tiles from the LAST matching, to know which (locations) to 
     int PrevID_Guess2;                          //return to blanks when a new matching has started.
-    double responseCount;                       //Keeps track of how many pairs happened. used to calculate accuracy %.
-    double correctRespCount;                    //Keeps track of CORRECT pairs that occur. used to calculate accuracy %.
+    double totalPairs;                          //Keeps track of how many pairs happened. used to calculate accuracy %.
+    double correctPairs;                        //Keeps track of CORRECT pairs that occur. used to calculate accuracy %.
     double accuracy;
 }
