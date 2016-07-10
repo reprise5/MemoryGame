@@ -6,6 +6,46 @@ All cards are face down when the game begins, and you need to flip 2 distinct ca
 Currently, if 2 shapes are showing and you press one of the showing shapes again, and proceed to make a new match you will confuse the game.  *You have to make a match with 2 distinct cards, and if they're not right,* **press an empty card.**
 I'm trying to fix that.
 
+##How it works
+######Randomizing the board
+First initShuffleTiles() is called from the startButton sub.initShuffleTiles loads the numbers 0-15 (4x4) or 0-35 (6x6) into an array, and shuffles the array.  Then the variables from index 0 and 1 are assigned to the first shape, index 2 and 3 to the next shape, and so on.
+
+######Shape COdes
+anything that is assigned to shapes, or any array or sub that reads shapes has to go in a specific order because each shape is assigned a code.  it is used to easily compare or deal with shapes, because a "shape" is more or less intagible in code. Here are all the shape codes and the shape they correspond to:
+
+**4x4 codes**
+
+| **Shape**     | **Code**      |
+|:-------------:|:-------------:| 
+| circle        | 0             |
+| cross         | 1             |
+| diamond       | 2             |
+| donut         | 3             |
+| eclipse       | 4             |
+| square        | 5             |
+| star          | 6             |
+| x             | 7             |
+ 
+ **6x6 codes**
+
+| **Shape**     | **Code**      |
+|:-------------:|:-------------:| 
+| circle        | 0             |
+| cross         | 1             |
+| diamond       | 2             |
+| dice          | 3             |
+| donut         | 4             |
+| eclipse       | 5             |
+| eclipse2      | 6             |
+| grapes        | 7             |
+| grapes        | 7             |
+| grapes        | 7             |
+| grapes        | 7             |
+| grapes        | 7             |
+
+
+##How to Play
+
 ####How To Win
 
 - flip up all matching pairs of shapes on the game board
