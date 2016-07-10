@@ -213,6 +213,7 @@ public class GameBoard extends javax.swing.JFrame {
 
         DebugCheck.setText("Debug");
         DebugCheck.setToolTipText("");
+        DebugCheck.setEnabled(false);
 
         FileMenu.setText("File");
 

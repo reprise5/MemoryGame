@@ -493,6 +493,7 @@ public class GameBoard2 extends javax.swing.JFrame {
 
         DebugCheck.setText("Debug");
         DebugCheck.setToolTipText("");
+        DebugCheck.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -751,6 +752,9 @@ public class GameBoard2 extends javax.swing.JFrame {
         score = 0;
         sScore = "0";
         ScoreScreen.setText(sScore);
+        accuracy = 0;
+        totalPairs = 0;
+        correctPairs = 0;
         
         buttonEnabledSwitch(false, 0);
         buttonEnabledSwitch(false, 1);
