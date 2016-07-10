@@ -10,8 +10,8 @@ I'm trying to fix that.
 ######Randomizing the board
 First initShuffleTiles() is called from the startButton sub.initShuffleTiles loads the numbers 0-15 (4x4) or 0-35 (6x6) into an array, and shuffles the array.  Then the variables from index 0 and 1 are assigned to the first shape, index 2 and 3 to the next shape, and so on.
 
-######Shape COdes
-anything that is assigned to shapes, or any array or sub that reads shapes has to go in a specific order because each shape is assigned a code.  it is used to easily compare or deal with shapes, because a "shape" is more or less intagible in code. Here are all the shape codes and the shape they correspond to:
+######Shape Codes
+anything that is assigned to shapes, or any array or sub that reads shapes has to go in a specific order because each shape is assigned a code.  it is used to easily compare or deal with shapes, because a "shape" is more or less intagible in code. The shapes are always in alphabetical order. Here are all the shape codes and the shape they correspond to:
 
 **4x4 codes**
 
@@ -38,11 +38,21 @@ anything that is assigned to shapes, or any array or sub that reads shapes has t
 | eclipse       | 5             |
 | eclipse2      | 6             |
 | grapes        | 7             |
-| grapes        | 7             |
-| grapes        | 7             |
-| grapes        | 7             |
-| grapes        | 7             |
+| heart         | 8             |
+| L             | 9             |
+| rectangle     | 10            |
+| snowflake     | 11            |
+| sqDonut       | 12            |
+| square        | 13            |
+| star          | 14            |
+| tear          | 15            |
+| triangle      | 16            |
+| X             | 17            |
 
+Shape codes are given when a button press asks a getTileType sub in the tileControl class what shape is at that given ID.  The ID serves as a location code. tileControl saves the shape codes that go to the ID's in its global variables for each shape.  so when you pass an ID to getTileType, it will return a shape code.  the ID would have to = the ID of a shape, which is what the if's are for.
+
+###### When a button is pressed
+...
 
 ##How to Play
 
