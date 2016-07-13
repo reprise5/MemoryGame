@@ -46,7 +46,7 @@ public class GameBoard extends javax.swing.JFrame {
         QuitMenuItem = new javax.swing.JMenuItem();
         GameMenu = new javax.swing.JMenu();
         resetBoardMenuItem = new javax.swing.JMenuItem();
-        save4x4Score = new javax.swing.JMenuItem();
+        enableDebug = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("4x4 Memory Game");
@@ -237,14 +237,13 @@ public class GameBoard extends javax.swing.JFrame {
         });
         GameMenu.add(resetBoardMenuItem);
 
-        save4x4Score.setText("Save Score...");
-        save4x4Score.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        save4x4Score.addActionListener(new java.awt.event.ActionListener() {
+        enableDebug.setText("Enable debugging");
+        enableDebug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                save4x4ScoreActionPerformed(evt);
+                enableDebugActionPerformed(evt);
             }
         });
-        GameMenu.add(save4x4Score);
+        GameMenu.add(enableDebug);
 
         jMenuBar1.add(GameMenu);
 
@@ -573,14 +572,6 @@ public class GameBoard extends javax.swing.JFrame {
         QuitMenuItemActionPerformed(evt);
     }//GEN-LAST:event_QuitButtonActionPerformed
 
-    //Saves score to text file.
-    private void save4x4ScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save4x4ScoreActionPerformed
-       
-        
-        
-        
-    }//GEN-LAST:event_save4x4ScoreActionPerformed
-
     //resets the whole game board to a fresh start as if it had never been opened.
     private void resetBoardMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBoardMenuItemActionPerformed
         wipeBoard();
@@ -613,7 +604,16 @@ public class GameBoard extends javax.swing.JFrame {
         buttonEnabledSwitch(false, 13);
         buttonEnabledSwitch(false, 14);
         buttonEnabledSwitch(false, 15);
+        
+        DebugCheck.setEnabled(false);
     }//GEN-LAST:event_resetBoardMenuItemActionPerformed
+
+    private void enableDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableDebugActionPerformed
+        String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
+        if (passphrase.equals("rzqxx5gv")){
+            DebugCheck.setEnabled(true);
+        }  
+    }//GEN-LAST:event_enableDebugActionPerformed
 
     //===================================OTHER DEFINED SUBROUTINES==================================
     
@@ -983,9 +983,9 @@ public class GameBoard extends javax.swing.JFrame {
     private javax.swing.JButton Tile42;
     private javax.swing.JButton Tile43;
     private javax.swing.JButton Tile44;
+    private javax.swing.JMenuItem enableDebug;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem resetBoardMenuItem;
-    private javax.swing.JMenuItem save4x4Score;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
 

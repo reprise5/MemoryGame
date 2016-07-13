@@ -65,6 +65,12 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile61 = new javax.swing.JButton();
         QuitButton = new javax.swing.JButton();
         DebugCheck = new javax.swing.JCheckBox();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        resetBoardMenuItem = new javax.swing.JMenuItem();
+        enableDebug = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("6x6 Memory Game");
@@ -495,6 +501,40 @@ public class GameBoard2 extends javax.swing.JFrame {
         DebugCheck.setToolTipText("");
         DebugCheck.setEnabled(false);
 
+        jMenu1.setText("File");
+
+        jMenuItem1.setText("Quit");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Game");
+
+        resetBoardMenuItem.setText("Reset Board");
+        resetBoardMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetBoardMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(resetBoardMenuItem);
+
+        enableDebug.setText("Enable debugging");
+        enableDebug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enableDebugActionPerformed(evt);
+            }
+        });
+        jMenu2.add(enableDebug);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -656,7 +696,7 @@ public class GameBoard2 extends javax.swing.JFrame {
                     .addComponent(Tile65, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile64, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile61, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
@@ -1155,6 +1195,90 @@ public class GameBoard2 extends javax.swing.JFrame {
         type = tileControl.get6x6TileType(ID);
         buttonPress(ID, type);
     }//GEN-LAST:event_Tile66ActionPerformed
+
+    //enableDebug
+    private void enableDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableDebugActionPerformed
+        String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
+        if (passphrase.equals("rzqxx5gv")){
+            DebugCheck.setEnabled(true);
+        }   
+    }//GEN-LAST:event_enableDebugActionPerformed
+
+    private void resetBoardMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBoardMenuItemActionPerformed
+        wipeBoard();
+        PrevID_Guess1 = 100;
+        PrevID_Guess2 = 100;
+        ID_Guess1 = 100;
+        ID_Guess2 = 100;
+        match = false;
+        count = 0;
+        score = 0;
+        sScore = "0";
+        ScoreScreen.setText(sScore);
+        accuracy = 0;
+        correctPairs = 0;
+        totalPairs = 0;
+        
+        buttonEnabledSwitch(false, 0);
+        buttonEnabledSwitch(false, 1);
+        buttonEnabledSwitch(false, 2);
+        buttonEnabledSwitch(false, 3);
+        buttonEnabledSwitch(false, 4);
+        buttonEnabledSwitch(false, 5);
+        buttonEnabledSwitch(false, 6);
+        buttonEnabledSwitch(false, 7);
+        buttonEnabledSwitch(false, 8);
+        buttonEnabledSwitch(false, 9);
+        buttonEnabledSwitch(false, 10);
+        buttonEnabledSwitch(false, 11);
+        buttonEnabledSwitch(false, 12);
+        buttonEnabledSwitch(false, 13);
+        buttonEnabledSwitch(false, 14);
+        buttonEnabledSwitch(false, 15);
+        buttonEnabledSwitch(false, 3);
+        buttonEnabledSwitch(false, 4);
+        buttonEnabledSwitch(false, 5);
+        buttonEnabledSwitch(false, 6);
+        buttonEnabledSwitch(false, 7);
+        buttonEnabledSwitch(false, 8);
+        buttonEnabledSwitch(false, 9);
+        buttonEnabledSwitch(false, 10);
+        buttonEnabledSwitch(false, 11);
+        buttonEnabledSwitch(false, 12);
+        buttonEnabledSwitch(false, 13);
+        buttonEnabledSwitch(false, 14);
+        buttonEnabledSwitch(false, 15);
+        buttonEnabledSwitch(false, 16);
+        buttonEnabledSwitch(false, 17);
+        buttonEnabledSwitch(false, 18);
+        buttonEnabledSwitch(false, 19);
+        buttonEnabledSwitch(false, 20);
+        buttonEnabledSwitch(false, 21);
+        buttonEnabledSwitch(false, 22);
+        buttonEnabledSwitch(false, 23);
+        buttonEnabledSwitch(false, 24);
+        buttonEnabledSwitch(false, 25);
+        buttonEnabledSwitch(false, 26);
+        buttonEnabledSwitch(false, 27);
+        buttonEnabledSwitch(false, 28);
+        buttonEnabledSwitch(false, 29);
+        buttonEnabledSwitch(false, 30);
+        buttonEnabledSwitch(false, 31);
+        buttonEnabledSwitch(false, 32);
+        buttonEnabledSwitch(false, 33);
+        buttonEnabledSwitch(false, 34);
+        buttonEnabledSwitch(false, 35);
+        
+        DebugCheck.setEnabled(false);
+    }//GEN-LAST:event_resetBoardMenuItemActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        System.out.println("========================\n"
+                 + "*** 6 x 6  C L O S E ***\n"
+                 + "========================");
+        resetBoardMenuItemActionPerformed(evt);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
     
     //====================================OTHER DEFINED SUBROUTINES==================================
     
@@ -1752,6 +1876,12 @@ public class GameBoard2 extends javax.swing.JFrame {
     private javax.swing.JButton Tile64;
     private javax.swing.JButton Tile65;
     private javax.swing.JButton Tile66;
+    private javax.swing.JMenuItem enableDebug;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem resetBoardMenuItem;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
     
