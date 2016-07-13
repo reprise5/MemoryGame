@@ -8,10 +8,14 @@ I'm trying to fix that.
 
 ##How it works
 ######Randomizing the board
-First initShuffleTiles() is called from the startButton sub.initShuffleTiles loads the numbers 0-15 (4x4) or 0-35 (6x6) into an array, and shuffles the array.  Then the variables from index 0 and 1 are assigned to the first shape, index 2 and 3 to the next shape, and so on.
+First, `initShuffleTiles()` is called when the start button is pressed. `initShuffleTiles()` loads the numbers 0-15 (in 4x4) or 0-35 (in6x6) into an array, then shuffles the array.  Then the variables from index 0 and 1 are assigned to the first shape, index 2 and 3 to the next shape, and so on.  Those variables become the ID's or locations of each of the shapes on the board.  Since circle takes the first 2 indeces of the array, and the numbers in those 2 slots are a random number each time,  it will place 2 circles in random places on the board.
+
+in the `tileControl` class, there are globals at the top that go to each shape.  The data in there is the ID of the shapes.
 
 ######Shape Codes
-anything that is assigned to shapes, or any array or sub that reads shapes has to go in a specific order because each shape is assigned a code.  it is used to easily compare or deal with shapes, because a "shape" is more or less intagible in code. The shapes are always in alphabetical order. Here are all the shape codes and the shape they correspond to:
+Any code that deals with shapes has to deal with them in a specific order, because each shape is assigned a code.  For example, if they're in an array, the index in the array corresponds to their shape code, so you would just pass `type`, or the shape code to read from the array and get the desired shape.
+
+the idea of having codes that correspond to shapes, is that they are used to easily compare and deal with shapes, because a "shape" is more or less intagible in code. The shapes are always in alphabetical order in this code. Here are all the shape codes and the shape they correspond to:
 
 **4x4 codes**
 
@@ -49,7 +53,24 @@ anything that is assigned to shapes, or any array or sub that reads shapes has t
 | triangle      | 16            |
 | X             | 17            |
 
-Shape codes are given when a button press asks a getTileType sub in the tileControl class what shape is at that given ID.  The ID serves as a location code. tileControl saves the shape codes that go to the ID's in its global variables for each shape.  so when you pass an ID to getTileType, it will return a shape code.  the ID would have to = the ID of a shape, which is what the if's are for.
+Shape codes are given when a button press asks a `getTileType()` sub in the `tileControl` class what shape is at the given ID. each button is assigned a unique ID in a local variable called `ID`. The ID serves as a location code. `tileControl` saves the ID's of each shape in its global variables, so when you pass an ID to `getTileType()`, it will return a shape code.  the ID would have to = the ID of a shape.
+
+```java
+int circle1, circle2;  //<hold the ID of the 2 circles
+int cross1, cross2;    //<hold the ID of the 2 crosses
+...
+
+public int get4x4TileType(int ID){
+        int type = 100;
+        
+        if (ID == circle1 || ID == circle2){
+            type = 0;  //shape code
+            System.out.print(type + " - Circle");
+        }
+        ...
+```
+
+The calling button will pass its ID or location code to `tilecontrol.getTileType()`. Because the global variables in tileControl are the ID's of each shape, all this does is compare them using if statements.  If the button sends its ID of 4, and the local variable for circle1 OR circle2 were assigned an ID of 4 by `initShuffleTiles()`, it gets a shape code `type` of 0 returned.
 
 ###### When a button is pressed
 ...
