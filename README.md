@@ -53,8 +53,26 @@ the idea of having codes that correspond to shapes, is that they are used to eas
 | triangle      | 16            |
 | X             | 17            |
 
-Shape codes are given when a button press asks a `getTileType()` sub in the `tileControl` class what shape is at the given ID. each button is assigned a unique ID in a local variable called `ID`. The ID serves as a location code. `tileControl` saves the ID's of each shape in its global variables, so when you pass an ID to `getTileType()`, it will return a shape code.  the ID would have to = the ID of a shape.
+Shape codes are given when a button press asks a `getTileType()` sub in the `tileControl` class what shape is at the given ID. each button is assigned a unique ID in a local variable called `ID`. The ID serves as a location code. `tileControl` saves the ID's of each shape in its global variables, so when you pass an ID to `getTileType()`, it will return a shape code.  the ID would have to equal the ID of a shape.
 
+
+###### When a button is pressed
+
+This is the code from a game button on GameBoard2, but it is the same on gameBoard.
+```java
+//button 0, row 1, column 1.
+private void Tile11ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        int ID = 0;    //<the unique ID of this particular button.
+        int type;      //<holds returned shape code from getTileType(int ID).
+                
+        System.out.print("1,1 -- ");            //Print to console what button this is.
+        type = tileControl.get6x6TileType(ID);  //asking what shape is at this button.
+        buttonPress(ID, type);                  //make game decisions.
+    }                                      
+ ```
+The calling button will pass its ID or location code to `tilecontrol.getTileType()`. Because the global variables in tileControl are the ID's of each shape, all this does is compare them using if statements.  If the button sends its ID of 4, and the local variable for circle1 OR circle2 were assigned an ID of 4 by `initShuffleTiles()`, it gets a shape code `type` of 0 returned.
+
+This is code from the `getTileType()` subroutine in the `tileControl` class.
 ```java
 int circle1, circle2;  //<hold the ID of the 2 circles
 int cross1, cross2;    //<hold the ID of the 2 crosses
@@ -69,11 +87,6 @@ public int get4x4TileType(int ID){
         }
         ...
 ```
-
-The calling button will pass its ID or location code to `tilecontrol.getTileType()`. Because the global variables in tileControl are the ID's of each shape, all this does is compare them using if statements.  If the button sends its ID of 4, and the local variable for circle1 OR circle2 were assigned an ID of 4 by `initShuffleTiles()`, it gets a shape code `type` of 0 returned.
-
-###### When a button is pressed
-...
 
 ##How to Play
 
