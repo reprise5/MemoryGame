@@ -608,11 +608,19 @@ public class GameBoard extends javax.swing.JFrame {
         DebugCheck.setEnabled(false);
     }//GEN-LAST:event_resetBoardMenuItemActionPerformed
 
+    //enable the debugging checkbox
     private void enableDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableDebugActionPerformed
-        String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
-        if (passphrase.equals("rzqxx5gv")){
-            DebugCheck.setEnabled(true);
-        }  
+        try{
+            String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
+            if (passphrase.equals("rzqxx5gv")){
+                DebugCheck.setEnabled(true);
+            }
+        }
+        catch(NullPointerException e){
+            System.out.println("error: " + e);
+        }
+        //if you open this JDialog and press cancel with none of your own input, Null Pointer Exception.
+        //even though "enter passphrase" is text that is already in the input box.
     }//GEN-LAST:event_enableDebugActionPerformed
 
     //===================================OTHER DEFINED SUBROUTINES==================================

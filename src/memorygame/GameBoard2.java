@@ -67,7 +67,7 @@ public class GameBoard2 extends javax.swing.JFrame {
         DebugCheck = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        QuitMenuItem = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         resetBoardMenuItem = new javax.swing.JMenuItem();
         enableDebug = new javax.swing.JMenuItem();
@@ -503,13 +503,13 @@ public class GameBoard2 extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("Quit");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        QuitMenuItem.setText("Quit");
+        QuitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                QuitMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(QuitMenuItem);
 
         jMenuBar1.add(jMenu1);
 
@@ -566,7 +566,7 @@ public class GameBoard2 extends javax.swing.JFrame {
                                 .addComponent(Tile15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Tile16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 32, Short.MAX_VALUE))
+                                .addGap(0, 16, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(DebugCheck))))
@@ -696,7 +696,7 @@ public class GameBoard2 extends javax.swing.JFrame {
                     .addComponent(Tile65, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile64, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tile61, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -706,6 +706,7 @@ public class GameBoard2 extends javax.swing.JFrame {
     private void startGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameButtonActionPerformed
         System.out.println("============NEW=GAME============");
 
+        //reset the variables.
         PrevID_Guess1 = 100;
         PrevID_Guess2 = 100;
         ID_Guess1 = 100;
@@ -768,7 +769,7 @@ public class GameBoard2 extends javax.swing.JFrame {
             System.out.print(i + ": ");
             int type = tileControl.get6x6TileType(i);
             
-            //will show all the shapes on the buttons, for debugging reasons.
+            //will show all the shapes on the buttons, for debugging reasons. if box is ticked.
             if (DebugCheck.isSelected()){
                 showTileShape(i, type);
             }
@@ -832,6 +833,8 @@ public class GameBoard2 extends javax.swing.JFrame {
         buttonEnabledSwitch(false, 33);
         buttonEnabledSwitch(false, 34);
         buttonEnabledSwitch(false, 35);
+        
+        DebugCheck.setEnabled(false);
         
         this.dispose();
     }//GEN-LAST:event_QuitButtonActionPerformed
@@ -1196,14 +1199,22 @@ public class GameBoard2 extends javax.swing.JFrame {
         buttonPress(ID, type);
     }//GEN-LAST:event_Tile66ActionPerformed
 
-    //enableDebug
+    //enable the debugging checkbox
     private void enableDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableDebugActionPerformed
-        String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
-        if (passphrase.equals("rzqxx5gv")){
-            DebugCheck.setEnabled(true);
-        }   
+        try{
+            String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
+            if (passphrase.equals("rzqxx5gv")){
+                DebugCheck.setEnabled(true);
+            }
+        }
+        catch(NullPointerException e){
+            System.out.println("error: " + e);
+        }
+        //if you open this JDialog and press cancel with none of your own input, Null Pointer Exception.
+        //even though "enter passphrase" is text that is already in the input box.
     }//GEN-LAST:event_enableDebugActionPerformed
 
+    //resets the board, and internal values.  will end a game prematurely.
     private void resetBoardMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBoardMenuItemActionPerformed
         wipeBoard();
         PrevID_Guess1 = 100;
@@ -1272,13 +1283,14 @@ public class GameBoard2 extends javax.swing.JFrame {
         DebugCheck.setEnabled(false);
     }//GEN-LAST:event_resetBoardMenuItemActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    //File>Quit
+    private void QuitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitMenuItemActionPerformed
         System.out.println("========================\n"
                  + "*** 6 x 6  C L O S E ***\n"
                  + "========================");
         resetBoardMenuItemActionPerformed(evt);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_QuitMenuItemActionPerformed
     
     //====================================OTHER DEFINED SUBROUTINES==================================
     
@@ -1838,6 +1850,7 @@ public class GameBoard2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox DebugCheck;
     private javax.swing.JButton QuitButton;
+    private javax.swing.JMenuItem QuitMenuItem;
     private javax.swing.JTextField ScoreScreen;
     private javax.swing.JLabel ScoreScreenLabel;
     private javax.swing.JButton Tile11;
@@ -1880,7 +1893,6 @@ public class GameBoard2 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem resetBoardMenuItem;
     private javax.swing.JButton startGameButton;
     // End of variables declaration//GEN-END:variables
