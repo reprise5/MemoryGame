@@ -614,7 +614,10 @@ public class GameBoard extends javax.swing.JFrame {
             String passphrase = JOptionPane.showInputDialog(rootPane, null, "enter passphrase");
             if (passphrase.equals("rzqxx5gv")){
                 DebugCheck.setEnabled(true);
+                System.out.println("enable-debug: debug checkbox unlocked.");
             }
+            else
+                System.out.println("enable-debug: incorrect passphrase. debugging not active.");
         }
         catch(NullPointerException e){
             System.out.println("error: " + e);
