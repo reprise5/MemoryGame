@@ -93,13 +93,14 @@ public int get4x4TileType(int ID){
 ####How To Win
 
 - flip up all matching pairs of shapes on the game board
-- Preferably have a score higher than 0 by the time you match all shapes.
+- Have a score higher than 0 by the time you match all shapes.
 - Cheating off the console.
 
 ####How To Lose
-- you really can't lose, you sort of keep going till you get them all right.
-- Having a score of 0 or less is considered losing though the program doesn't let you know you technically lost.
+
+-You need a score of less than 0 to lose the game.
+- it's kind of hard to lose. no matter what, the game ends when you match all the pairs correctly.  At the end, it decides if your score is high enough to be a winner.  
 
 ####I'm not a developer, I just want to play.
-I built the program into an executable .jar.  All you need to do is download this repository, go to the `dist` folder, and run `MemoryGame.jar` 
+I built the program into an executable.  All you need to do is download this repository, go to the `dist` folder, and run `MemoryGame.jar` 
 with your JRE. (which you need to have installed first).
