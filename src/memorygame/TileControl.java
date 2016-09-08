@@ -34,6 +34,7 @@ public class TileControl {
     
     //generate random numbers & assign them to each shape twice.  its their location on the game board.
     public void initShuffle4x4Tiles(){
+        int n = 0;
 
         //first add all the numbers from 0 to 15 into an array list, then shuffle it
         List<Integer> randomCollection = new ArrayList<>();
@@ -43,22 +44,38 @@ public class TileControl {
         Collections.shuffle(randomCollection);
 
         //assign each shape their locations
-        circle1 = randomCollection.get(0);
-        circle2 = randomCollection.get(1);
-        cross1 = randomCollection.get(2);    
-        cross2 = randomCollection.get(3);   
-        diamond1 = randomCollection.get(4);
-        diamond2 = randomCollection.get(5);
-        donut1 = randomCollection.get(6);
-        donut2 = randomCollection.get(7);
-        eclipse1 = randomCollection.get(8);
-        eclipse2 = randomCollection.get(9);
-        square1 = randomCollection.get(10);
-        square2 = randomCollection.get(11);
-        star1 = randomCollection.get(12);
-        star2 = randomCollection.get(13);
-        X1 = randomCollection.get(14);;
-        X2 = randomCollection.get(15);
+        circle1 = randomCollection.get(n);
+        n++;
+        circle2 = randomCollection.get(n);
+        n++;
+        cross1 = randomCollection.get(n);
+        n++;       
+        cross2 = randomCollection.get(n);
+        n++   ;   
+        diamond1 = randomCollection.get(n);
+        n++;
+        diamond2 = randomCollection.get(n);
+        n++; 
+        donut1 = randomCollection.get(n);
+        n++;
+        donut2 = randomCollection.get(n);
+        n++;
+        eclipse1 = randomCollection.get(n);
+        n++;
+        eclipse2 = randomCollection.get(n);
+        n++; 
+        square1 = randomCollection.get(n);
+        n++;
+        square2 = randomCollection.get(n);
+        n++;
+        star1 = randomCollection.get(n);
+        n++;
+        star2 = randomCollection.get(n);
+        n++;
+        X1 = randomCollection.get(n);
+        n++;
+        X2 = randomCollection.get(n);
+        n++; 
     }
     
     //The type returned is a code from 0-7 that theoretically corresponds to a "shape". 
@@ -109,6 +126,7 @@ public class TileControl {
    
     //generate random numbers & assign them to each shape twice.  its their location on the game board.
     public void initShuffle6x6Tiles(){
+        int n = 0;
 
         //first add all the numbers from 0 to 35 into an array list, then shuffle it.
         //then assign the value in slot 0 to a shape, etc etc. each shape gets a random value. 
@@ -118,42 +136,78 @@ public class TileControl {
         }
         Collections.shuffle(randomCollection);
 
-        circle1 = randomCollection.get(0);
-        circle2 = randomCollection.get(1);
-        cross1 = randomCollection.get(2);
-        cross2 = randomCollection.get(3);
-        diamond1 = randomCollection.get(4);
-        diamond2 = randomCollection.get(5);
-        dice1 = randomCollection.get(6);
-        dice2 = randomCollection.get(7);
-        donut1 = randomCollection.get(8);
-        donut2 = randomCollection.get(9);
-        eclipse1 = randomCollection.get(10);
-        eclipse2 = randomCollection.get(11);
-        eclipse3 = randomCollection.get(12);
-        eclipse4 = randomCollection.get(13);
-        grapes1 = randomCollection.get(14);
-        grapes2 = randomCollection.get(15);
-        heart1 = randomCollection.get(16);
-        heart2 = randomCollection.get(16);
-        L1 = randomCollection.get(17);
-        L2 = randomCollection.get(18);
-        rectangle1 = randomCollection.get(19);
-        rectangle2 = randomCollection.get(20);
-        snowflake1 = randomCollection.get(21);
-        snowflake2 = randomCollection.get(22);
-        sqdonut1 = randomCollection.get(23);
-        sqdonut2 = randomCollection.get(24);
-        square1 = randomCollection.get(25);
-        square2 = randomCollection.get(26);
-        star1 = randomCollection.get(27);
-        star2 = randomCollection.get(28);
-        tear1 = randomCollection.get(29);
-        tear2 = randomCollection.get(30);
-        triangle1 = randomCollection.get(31);
-        triangle2 = randomCollection.get(32);
-        X1 = randomCollection.get(33);
-        X2 = randomCollection.get(34);
+        circle1 = randomCollection.get(n);
+        n++;
+        circle2 = randomCollection.get(n);
+        n++;
+        cross1 = randomCollection.get(n);
+        n++;       
+        cross2 = randomCollection.get(n);
+        n++   ;   
+        diamond1 = randomCollection.get(n);
+        n++;
+        diamond2 = randomCollection.get(n);
+        n++;
+        dice1 = randomCollection.get(n);
+        n++;
+        dice2 = randomCollection.get(n);
+        n++;
+        donut1 = randomCollection.get(n);
+        n++;
+        donut2 = randomCollection.get(n);
+        n++;
+        eclipse1 = randomCollection.get(n);
+        n++;
+        eclipse2 = randomCollection.get(n);
+        n++;
+        eclipse3 = randomCollection.get(n);
+        n++;
+        eclipse4 = randomCollection.get(n);
+        n++;
+        grapes1 = randomCollection.get(n);
+        n++;
+        grapes2 = randomCollection.get(n);
+        n++;
+        heart1 = randomCollection.get(n);
+        n++;
+        heart2 = randomCollection.get(n);
+        n++;
+        L1 = randomCollection.get(n);
+        n++;
+        L2 = randomCollection.get(n);
+        n++;
+        rectangle1 = randomCollection.get(n);
+        n++;
+        rectangle2 = randomCollection.get(n);
+        n++;
+        snowflake1 = randomCollection.get(n);
+        n++;
+        snowflake2 = randomCollection.get(n);
+        n++;
+        sqdonut1 = randomCollection.get(n);
+        n++;
+        sqdonut2 = randomCollection.get(n);
+        n++;
+        square1 = randomCollection.get(n);
+        n++;
+        square2 = randomCollection.get(n);
+        n++;
+        star1 = randomCollection.get(n);
+        n++;
+        star2 = randomCollection.get(n);
+        n++;
+        tear1 = randomCollection.get(n);
+        n++;
+        tear2 = randomCollection.get(n);
+        n++;
+        triangle1 = randomCollection.get(n);
+        n++;
+        triangle2 = randomCollection.get(n);
+        n++;
+        X1 = randomCollection.get(n);
+        n++;
+        X2 = randomCollection.get(n);
+        n++; 
     }
     
     //The type returned is a code from 0-7 that theoretically corresponds to a "shape". 
