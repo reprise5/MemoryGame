@@ -1,7 +1,8 @@
-
 package memorygame;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -72,7 +73,7 @@ public class GameBoard2 extends javax.swing.JFrame {
         resetBoardMenuItem = new javax.swing.JMenuItem();
         enableDebug = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("6x6 Memory Game");
 
         ScoreScreenLabel.setFont(new java.awt.Font("FreeSerif", 1, 14)); // NOI18N
@@ -714,12 +715,11 @@ public class GameBoard2 extends javax.swing.JFrame {
         match = false;
         count = 0;
         score = 0;
-        sScore = "0";
         accuracy = 0;
         correctPairs = 0;
         totalPairs = 0;
 
-        ScoreScreen.setText(sScore);
+        ScoreScreen.setText(Integer.toString(score));
 
         //Re-Enable the buttons.
         Tile11.setEnabled(true);
@@ -758,7 +758,6 @@ public class GameBoard2 extends javax.swing.JFrame {
         Tile64.setEnabled(true);
         Tile65.setEnabled(true);
         Tile66.setEnabled(true);
-        
 
         //Set the icons to be Blank.
         wipeBoard();
@@ -774,8 +773,12 @@ public class GameBoard2 extends javax.swing.JFrame {
                 showTileShape(i, type);
             }
         }
+        //carriage return
         System.out.println();
-
+        
+        //let the user see the board for a second.  Then they match by memory.
+        flashShapes();
+        
     }//GEN-LAST:event_startGameButtonActionPerformed
 
     //desc="Reset the board as if it had never been opened, and then close it.  doesn't quit program."
@@ -1246,19 +1249,6 @@ public class GameBoard2 extends javax.swing.JFrame {
         buttonEnabledSwitch(false, 13);
         buttonEnabledSwitch(false, 14);
         buttonEnabledSwitch(false, 15);
-        buttonEnabledSwitch(false, 3);
-        buttonEnabledSwitch(false, 4);
-        buttonEnabledSwitch(false, 5);
-        buttonEnabledSwitch(false, 6);
-        buttonEnabledSwitch(false, 7);
-        buttonEnabledSwitch(false, 8);
-        buttonEnabledSwitch(false, 9);
-        buttonEnabledSwitch(false, 10);
-        buttonEnabledSwitch(false, 11);
-        buttonEnabledSwitch(false, 12);
-        buttonEnabledSwitch(false, 13);
-        buttonEnabledSwitch(false, 14);
-        buttonEnabledSwitch(false, 15);
         buttonEnabledSwitch(false, 16);
         buttonEnabledSwitch(false, 17);
         buttonEnabledSwitch(false, 18);
@@ -1485,7 +1475,7 @@ public class GameBoard2 extends javax.swing.JFrame {
     
     //Check for a win or loss - if all buttons are pressed, make decision based on score.
     private void checkEndGame(){
-        if (!Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && !Tile15.isEnabled() && !Tile16.isEnabled() && 
+        if (    !Tile11.isEnabled() && !Tile12.isEnabled() && !Tile13.isEnabled() && !Tile14.isEnabled() && !Tile15.isEnabled() && !Tile16.isEnabled() && 
                 !Tile21.isEnabled() && !Tile22.isEnabled() && !Tile23.isEnabled() && !Tile24.isEnabled() && !Tile25.isEnabled() && !Tile26.isEnabled() &&
                 !Tile31.isEnabled() && !Tile32.isEnabled() && !Tile33.isEnabled() && !Tile34.isEnabled() && !Tile35.isEnabled() && !Tile36.isEnabled() &&
                 !Tile41.isEnabled() && !Tile42.isEnabled() && !Tile43.isEnabled() && !Tile44.isEnabled() && !Tile45.isEnabled() && !Tile46.isEnabled() &&
@@ -1817,35 +1807,28 @@ public class GameBoard2 extends javax.swing.JFrame {
         }        
     }
     
-    //===============================================================================================
-    
-    public static void main(String args[]) {
-
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
+    //Shows the shapes to the player for a small duration of time, then trturns the buttons to blank again.
+    private void flashShapes(){
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    for (int i = 0; i<= 35; i++){
+                        int type = tileControl.get6x6TileType(i);
+                        showTileShape(i, type);
+                    }
+                    Thread.sleep(1200);
+                    if (!DebugCheck.isSelected()){
+                        wipeBoard();
+                    }
+                } 
+                catch (InterruptedException ex) {
+                    Logger.getLogger(GameBoard2.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GameBoard2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GameBoard2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GameBoard2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GameBoard2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GameBoard2().setVisible(true);
-            }
-        });
+        };
+        thread.start(); 
     }
+    //===============================================================================================
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox DebugCheck;

@@ -1,6 +1,8 @@
 package memorygame;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -48,7 +50,7 @@ public class GameBoard extends javax.swing.JFrame {
         resetBoardMenuItem = new javax.swing.JMenuItem();
         enableDebug = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("4x4 Memory Game");
         setResizable(false);
 
@@ -354,12 +356,11 @@ public class GameBoard extends javax.swing.JFrame {
         match = false;
         count = 0;
         score = 0;
-        sScore = "0";
         accuracy = 0;
         totalPairs = 0;
         correctPairs = 0;
         
-        ScoreScreen.setText(sScore);
+        ScoreScreen.setText(Integer.toString(score));
         
         //Re-Enable the buttons.
         Tile11.setEnabled(true);
@@ -389,13 +390,15 @@ public class GameBoard extends javax.swing.JFrame {
             int type = tileControl.get4x4TileType(i);
             
             //will show all the shapes on the buttons, for debugging reasons.
-            //check the box, and THEN click start for it to work. 
             if (DebugCheck.isSelected()){
                 showTileShape(i, type);
             }
         }
+        //carriage return.
         System.out.println();
         
+        //let the user see the board for a second.  Then they match by memory.
+        flashShapes();
     }//GEN-LAST:event_startGameButtonActionPerformed
 
     //Tile 1,1 | ID 0 - Press
@@ -934,37 +937,27 @@ public class GameBoard extends javax.swing.JFrame {
             count = 0;
         }  
     }
-    //form's main
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
+
+    //Shows the shapes to the player for a small duration of time, then trturns the buttons to blank again.
+    private void flashShapes(){
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    for (int i = 0; i<= 15; i++){
+                        int type = tileControl.get4x4TileType(i);
+                        showTileShape(i, type);
+                    }
+                    Thread.sleep(800);
+                    if (!DebugCheck.isSelected()){
+                        wipeBoard();
+                    }
+                } 
+                catch (InterruptedException ex) {
+                    Logger.getLogger(GameBoard.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GameBoard().setVisible(true);
-            }
-        });
+        };
+        thread.start(); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
