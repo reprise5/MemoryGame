@@ -35,41 +35,30 @@ Any code that deals with shapes has to deal with them in a specific order, becau
 
 the idea of having codes that correspond to shapes, is that they are used to easily compare and deal with shapes, because a "shape" is more or less intagible in code. The shapes are always in alphabetical order in this code. Here are all the shape codes and the shape they correspond to:
 
-**4x4 codes**
+**4x4 codes................................6x6 codes**
 
-| **Shape**     | **Code**      |
-|:-------------:|:-------------:| 
-| circle        | 0             |
-| cross         | 1             |
-| diamond       | 2             |
-| donut         | 3             |
-| eclipse       | 4             |
-| square        | 5             |
-| star          | 6             |
-| x             | 7             |
- 
- **6x6 codes**
+| **Shape**     | **Code**      | **Shape**     | **Code**      |
+|:-------------:|:-------------:|:-------------:|:-------------:| 
+| circle        | 0             | circle        | 0             |
+| cross         | 1             | cross         | 1             |
+| diamond       | 2             | diamond       | 2             |
+| donut         | 3             | dice          | 3             |
+| eclipse       | 4             | donut         | 4             |
+| square        | 5             | eclipse       | 5             |
+| star          | 6             | eclipse2      | 6             |
+| x             | 7             | grapes        | 7             |
+| -             | -             | heart         | 8             |
+| -             | -             | L             | 9             |
+| -             | -             | rectangle     | 10            |  
+| -             | -             | snowflake     | 11            |
+| -             | -             | sqDonut       | 12            |
+| -             | -             | square        | 13            |
+| -             | -             | star          | 14            |
+| -             | -             | tear          | 15            |
+| -             | -             | triangle      | 16            |
+| -             | -             | X             | 17          
 
-| **Shape**     | **Code**      |
-|:-------------:|:-------------:| 
-| circle        | 0             |
-| cross         | 1             |
-| diamond       | 2             |
-| dice          | 3             |
-| donut         | 4             |
-| eclipse       | 5             |
-| eclipse2      | 6             |
-| grapes        | 7             |
-| heart         | 8             |
-| L             | 9             |
-| rectangle     | 10            |
-| snowflake     | 11            |
-| sqDonut       | 12            |
-| square        | 13            |
-| star          | 14            |
-| tear          | 15            |
-| triangle      | 16            |
-| X             | 17            |
+
 
 Shape codes are given when a button press asks a `getTileType()` sub in the `tileControl` class what shape is at the given ID. Each button is assigned a unique ID in a local variable called `ID`. The ID serves as a location code. `tileControl` saves the ID's of each shape in its global variables, so when you pass an ID to `getTileType()`, it will return a shape code.  the ID would have to equal the ID of a shape.
 
